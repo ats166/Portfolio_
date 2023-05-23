@@ -8,6 +8,8 @@ import reportWebVitals from "./reportWebVitals";
 import NotFoundPage from "./pages/NotFoundPage";
 import MainPage from "./pages/MainPage";
 import IntroPage from "./pages/IntroPage";
+import ProjectPage from "./pages/ProjectPage";
+import OtherPage from "./pages/OtherPage";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -18,6 +20,8 @@ root.render(
         <Route path="/" element={<App />}>
           <Route index element={<IntroPage />} />
           <Route path="home" element={<MainPage />} />
+          <Route path="project" element={<ProjectPage />} />
+          <Route path="other" element={<OtherPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

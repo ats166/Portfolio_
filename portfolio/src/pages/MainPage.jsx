@@ -12,5 +12,5 @@ export default function MainPage() {
 }
 
 const Container = styled.div`
-  ${tw`w-full border border-4`}
+  ${tw`w-full max-w-[1152px] mx-auto`}
 `;
