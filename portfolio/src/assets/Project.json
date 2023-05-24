@@ -2,32 +2,104 @@
   "ProjectList": [
     {
       "id": 1,
-      "E-name": "Willump-TV",
-      "K-name": "윌럼프티비",
+      "e_name": "Willump-TV",
+      "k_name": "윌럼프티비",
       "starttime": "2022-11-16",
       "endtime": "2022-11-24",
-      "overview": "윌럼프티비"
+      "result": "",
+      "overview": "사용자 맞춤 영화 추천 서비스",
+      "skills": ["Vue2.js", "Bootstrap"],
+      "skillsReason": [
+        "사용자 경험을 위해 SPA를 구현하고자 했고, 첫 웹 개발을 함에 있어 직관적인 문법을 통해 비교적 낮은 진입장벽을 요구하기에 Vue를 선택했습니다.",
+        "가장 유명하고 사용하기 쉬우며 반응형 웹사이트를 구현하기 위해 사용했습니다"
+      ],
+      "role": "Front-End",
+      "contribution": "60%",
+      "personnel": 2,
+      "summary": ""
     },
     {
       "id": 2,
-      "E-name": "Zzalu",
-      "K-name": "짤루",
+      "e_name": "Zzalu",
+      "k_name": "짤루",
       "starttime": "2023-01-03",
-      "endtime": "2023-02-17"
+      "result": "우수상",
+      "endtime": "2023-02-17",
+      "overview": "GIF를 활용한 모바일 웹 SNS 서비스",
+      "skills": ["Vue3.js", "Tailwind", "PostCSS", "Figma", "Jira", "GitLab"],
+      "skillsReason": [
+        "Vue3를 협업에서 어떤식으로 사용하는지에 대해 React로 프로젝트를 진행 하기 전에 정확하게 알고 사용하고 싶어서 사용했습니다. 실제로 Vuex의 Store 모듈화를 통해 원활한 협업을 진행했습니다.",
+        "Tailwind는 Bootstrap보다 높은 자유도를 제공해주며 2022년 기준 CSS 프레임워크 사용 만족도 1위를 달리고 있어 사용했습니다. 개인적으로 굉장히 만족하는 프레임워크입니다.",
+        "PostCSS의 다양한 플러그인을 사용하여 CSS 코드의 커스터마이징을 쉽게하기 위해 사용했습니다.",
+        "팀원과 프로젝트를 기획, 설계할 때, 보다 효율적인 협업을 위해 디자인 툴이 필요하다고 생각했습니다. 프론트와는 디자인에 대한 아이디어를 검증 및 디자인의 통일성을 가져갈 수 있었으며, 백엔드에서는 피그마 디자인과 와이어 프레임을 보고 프론트의 개발과정을 이해하고 프론트엔드와 백엔드와의 원활한 소통을 위해 사용했습니다.",
+        "지라의 Agile 방법론을 통해 팀원의 일정을 보다 구체적으로 관리하고 업무의 우선순위를 정하여 업무를 효율적으로 처리하기 위해 사용했습니다. 저는 해당 프로젝트에서 Front-end의 지라 담당자로 활동했으며 프론트 엔드의 전체적인 일정 관리를 맡았습니다.",
+        "Git은 협업에 있어 필수적인 도구이며, Git 기반으로 한 GitLab을 통해 팀원 전체의 코드 관리와 버전 관리를 위해 사용하였습니다. 또한 코드 리뷰를 통해 코드 품질을 높이고, 리뷰 후 변경사항을 Git 담당자를 통해 승인을 받고 Merge를 진행함으로써, 코드 품질을 보장하였습니다."
+      ],
+      "role": "Front-End",
+      "contribution": "20%",
+      "personnel": 6
     },
     {
       "id": 3,
-      "E-name": "Returnz",
-      "K-name": "리턴즈",
+      "e_name": "Returnz",
+      "k_name": "리턴즈",
       "starttime": "2023-02-20",
-      "endtime": "2023-04-07"
+      "result": "우수상",
+      "endtime": "2023-04-07",
+      "overview": "과거 데이터 기반 모의 주식 투자 게임 서비스",
+      "skills": [
+        "React",
+        "Redux",
+        "React-Query",
+        "Tailwind",
+        "styled-components",
+        "GitLab",
+        "Figma",
+        "Jira"
+      ],
+      "skillsReason": [
+        "현재 시장에서 가장 많이 사용하는 프론트엔드 프레임워크이고 다양한 라이브러리와 다양한 정보가 있는 커뮤니티가 활발하게 활동하고 있다는 장점을 가지고 있어 해당 프로젝트에서 React를 사용했습니다.",
+        "동일한 데이터를 서버에 여러 번 요청하여 서버 리소스가 낭비 되는 것을 방지하고 컴포넌트 간 데이터 전송 관계가 복잡해지면 유지보수가 어려워질 것이라 생각해 Redux를 이용하여 필요한 데이터들을 집중 관리하기 위해 사용했습니다.",
+        "React-Query를 이용하여 외부 api를 주기적으로 호출하여 새로운 상태로 업데이트를 하되, 잦은 중복 호출은 지양하기 위해 사용했습니다.",
+        "테일윈드",
+        "스타일드컴포넌트",
+        "Git Flow를 사용한 버전 관리를 진행했습니다",
+        "피그마",
+        "지라"
+      ],
+      "role": "Front-End",
+      "contribution": "20%",
+      "personnel": 6
     },
     {
       "id": 4,
-      "E-name": "Buddiary",
-      "K-name": "버디어리",
+      "e_name": "Buddiary",
+      "k_name": "버디어리",
       "starttime": "2023-04-10",
-      "endtime": "2023-05-19"
+      "result": "",
+      "endtime": "2023-05-19",
+      "overview": "키워드 기반 일기메이트 추천 서비스",
+      "skills": [
+        "React",
+        "Redux",
+        "Tailwind",
+        "styled-components",
+        "GitLab",
+        "Figma",
+        "Jira"
+      ],
+      "skillsReason": [
+        "리액트",
+        "리덕스",
+        "테일윈드",
+        "스타일드컴포넌트",
+        "깃랩",
+        "피그마",
+        "지라"
+      ],
+      "role": "Front-End",
+      "contribution": "15%",
+      "personnel": 6
     }
   ]
 }

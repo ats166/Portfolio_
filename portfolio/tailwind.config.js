@@ -9,6 +9,7 @@ module.exports = {
     fontFamily: {
       mf: ["GangwonEduPowerExtraBoldA"],
       mmf: ["GyeonggiBatang"],
+      intro: ["SUITE-Regular"],
     },
   },
   plugins: [],
