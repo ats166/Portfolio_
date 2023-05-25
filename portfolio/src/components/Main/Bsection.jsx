@@ -30,7 +30,7 @@ export default function Bsection() {
   return (
     <SectionContainer ref={ref}>
       <LeftSection>
-        <Introduce>
+        <Introduce run={run}>
           제가 사용했던 기술들을 소개합니다 <ToolsGIF src={tools} alt="기술" />
         </Introduce>
       </LeftSection>
@@ -43,7 +43,7 @@ export default function Bsection() {
             Other
           </OtherButton>
         </div>
-        {skills === 0 ? <FrontSkills /> : <OtherSkills />}
+        {skills === 0 ? <FrontSkills run={run} /> : <OtherSkills run={run} />}
       </RightSection>
     </SectionContainer>
   );
@@ -60,6 +60,21 @@ const LeftSection = styled.div`
 const Introduce = styled.div`
   ${tw`text-5xl w-[70%] font-bold break-keep flex items-end`}
   line-height:80px;
+
+  animation-name: uptext;
+  animation-duration: 2s;
+  animation-play-state: ${(props) => props.run};
+
+  @keyframes uptext {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 const ToolsGIF = styled.img`

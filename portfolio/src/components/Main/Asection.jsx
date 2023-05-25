@@ -238,12 +238,12 @@ const HideBox2 = styled.span`
 `;
 
 const ShowText = styled.div`
-  animation-name: showtext;
+  animation-name: Ashowtext;
   animation-delay: 0.8s;
   animation-duration: 0.5s;
   animation-fill-mode: both;
 
-  @keyframes showtext {
+  @keyframes Ashowtext {
     0% {
       opacity: 0;
     }

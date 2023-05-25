@@ -4,7 +4,7 @@ import skills from "../../../assets/Skills.json";
 
 import FrontCards from "./FrontCards";
 
-export default function FrontSKills() {
+export default function FrontSKills(props) {
   const skill = skills.Front;
 
   console.log(skill);
@@ -12,7 +12,7 @@ export default function FrontSKills() {
     <SkillsContainer>
       <div className="flex flex-col justify-evenly h-full">
         {skill.map((data, idx) => (
-          <FrontCards data={data} idx={idx} />
+          <FrontCards data={data} idx={idx} run={props.run} />
         ))}
       </div>
     </SkillsContainer>

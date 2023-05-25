@@ -5,19 +5,20 @@ export default function FrontCards(props) {
   const skill = props.data;
   const time = props.idx / 10;
   return (
-    <CardContainer time={time}>
-      {skill.name} {skill.value} {skill.overview}
+    <CardContainer time={time} run={props.run}>
+      {skill.name}
     </CardContainer>
   );
 }
 
 const CardContainer = styled.div`
-  ${tw`border`}
+  ${tw`w-[80%] mx-auto`}
 
   animation-name : upcard;
   animation-delay: ${(props) => props.time}s;
   animation-duration: 1s;
   animation-fill-mode: both;
+  animation-play-state: ${(props) => props.run};
 
   @keyframes upcard {
     0% {
