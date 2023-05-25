@@ -13,7 +13,6 @@ export default function MainPage() {
         <Asection />
         <Bsection />
         <Csection />
-        <Link to="/">to 인트로</Link>
       </Container>
       <Footer />
     </>

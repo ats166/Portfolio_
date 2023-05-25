@@ -34,7 +34,7 @@ export default function Csection() {
     [Buddiary, BuddiaryM, "키워드 기반 교환일기메이트 추천 서비스", "Buddiary"],
     [WillumpTV, NosignalM, "사용자 맞춤 영화 추천 서비스", "Willump TV"],
   ];
-  const [selectNum, setSelectNum] = useState(2);
+  const [selectNum, setSelectNum] = useState(0);
 
   const handleSelectNum = (n) => {
     setSelectNum(n);

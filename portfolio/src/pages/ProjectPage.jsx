@@ -2,14 +2,16 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 import ProjectItem from "../components/Project/ProjectItem";
 import project from "../assets/Project.json";
+import Construction from "../components/Construction";
 
 export default function ProjectPage() {
   console.log(project);
   return (
     <Container>
-      {project.ProjectList.map((data) => (
+      <Construction />
+      {/* {project.ProjectList.map((data) => (
         <ProjectItem data={data} key={data.id} />
-      ))}
+      ))} */}
     </Container>
   );
 }

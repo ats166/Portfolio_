@@ -7,12 +7,11 @@ import FrontCards from "./FrontCards";
 export default function FrontSKills(props) {
   const skill = skills.Front;
 
-  console.log(skill);
   return (
     <SkillsContainer>
       <div className="flex flex-col justify-evenly h-full">
         {skill.map((data, idx) => (
-          <FrontCards data={data} idx={idx} run={props.run} />
+          <FrontCards data={data} idx={idx} run={props.run} key={data.id} />
         ))}
       </div>
     </SkillsContainer>

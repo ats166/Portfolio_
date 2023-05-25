@@ -2,7 +2,7 @@ import React from "react";
 import tw, { styled } from "twin.macro";
 
 export default function Footer(props) {
-  return <Container>footer</Container>;
+  return <Container></Container>;
 }
 
 const Container = styled.div`

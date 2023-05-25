@@ -1,13 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import tw, { styled } from "twin.macro";
 import photo from "../../assets/Kjy.jpg";
 import github from "../../assets/github.png";
 import tistory from "../../assets/tistory.png";
+import { useNavigate } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 
 export default function Asection() {
+  const navigate = useNavigate();
+  const [ref, inView] = useInView({ threshold: 0.7 });
+
+  const handleGoIntro = () => {
+    navigate(`/`);
+  };
+
+  const handleGoTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    if (inView) {
+    } else {
+    }
+  }, [inView]);
   return (
     <>
-      <SectionContainer>
+      {inView === false ? <GoTop onClick={handleGoTop}>▲</GoTop> : null}
+      <GoIntro onClick={handleGoIntro}>인트로 다시보기</GoIntro>
+      <SectionContainer ref={ref}>
         <LeftSection>
           <ImageBox>
             <MyPicture src={photo} alt="사진" />
@@ -100,6 +120,14 @@ export default function Asection() {
     </>
   );
 }
+
+const GoIntro = styled.button`
+  ${tw`fixed bottom-8 right-20 border-2 p-2 font-mmf rounded-xl bg-gray-400 text-white`}
+`;
+
+const GoTop = styled.button`
+  ${tw`fixed bottom-8 right-56 border-2 p-2 h-12 w-12 rounded-full text-black`}
+`;
 
 const SectionContainer = styled.div`
   ${tw`h-[70vh] flex font-intro`}

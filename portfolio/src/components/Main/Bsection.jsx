@@ -87,17 +87,21 @@ const RightSection = styled.div`
 `;
 
 const FrontButton = styled.button`
-  ${tw`h-12 w-36`}
+  ${tw`h-12 w-36 text-xl`}
   transform: translateY(2px);
 
   ${(props) =>
-    props.skills === 0 ? tw`bg-my-blue rounded-t-xl` : tw`border rounded-t-xl`}
+    props.skills === 0
+      ? tw`bg-my-blue rounded-t-xl text-white`
+      : tw`border rounded-t-xl`}
 `;
 
 const OtherButton = styled.button`
-  ${tw`h-12 w-36`}
+  ${tw`h-12 w-36 text-xl`}
   transform: translateY(2px);
 
   ${(props) =>
-    props.skills === 1 ? tw`bg-gray-100 rounded-t-xl` : tw`border rounded-t-xl`}
+    props.skills === 1
+      ? tw`bg-gray-100 rounded-t-xl `
+      : tw`border rounded-t-xl`}
 `;
