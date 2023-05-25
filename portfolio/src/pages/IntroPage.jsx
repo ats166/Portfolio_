@@ -409,37 +409,37 @@ const MiddleTextSecond = styled.div`
     40% {
       transform: translateY(220%);
     }
-    45% {
+    44% {
       transform: translateY(240%);
     }
-    50% {
+    48% {
       transform: translateY(225%);
     }
-    55% {
+    52% {
       transform: translateY(240%);
     }
-    60% {
+    58% {
       transform: translateY(230%);
     }
-    65% {
+    61% {
       transform: translateY(240%);
     }
-    70% {
+    66% {
       transform: translateY(232%);
     }
-    75% {
+    72% {
       transform: translateY(240%);
     }
-    80% {
+    78% {
       transform: translateY(234%);
     }
-    85% {
+    83% {
       transform: translateY(240%);
     }
-    90% {
+    87% {
       transform: translateY(235%);
     }
-    95% {
+    93% {
       transform: translateY(240%);
     }
     100% {
