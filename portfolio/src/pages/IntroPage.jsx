@@ -5,11 +5,15 @@ import tw, { styled } from "twin.macro";
 export default function IntroPage() {
   const navigate = useNavigate();
   setTimeout(() => {
-    console.log("실");
     navigate(`/home`);
   }, 27000);
+
+  const handleGoMain = () => {
+    navigate(`/home`);
+  };
   return (
     <IntroContainer>
+      {/* <GoMain onClick={handleGoMain}> Skip </GoMain> */}
       {/* 블라인드 섹션 */}
       <FirstBlind>
         <FirstLeftBlind></FirstLeftBlind>
@@ -64,6 +68,10 @@ export default function IntroPage() {
     </IntroContainer>
   );
 }
+
+const GoMain = styled.button`
+  ${tw`fixed bottom-12 right-32 border-2 p-2 bg-white h-8 w-20 rounded-xl z-20`}
+`;
 
 const IntroContainer = styled.div`
   ${tw`fixed inset-0 flex font-intro`}

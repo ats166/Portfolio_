@@ -3,12 +3,17 @@
     {
       "id": 1,
       "e_name": "Willump-TV",
-      "k_name": "윌럼프티비",
+      "k_name": "윌럼프 티비",
       "starttime": "2022-11-16",
       "endtime": "2022-11-24",
+      "Week": "1주",
       "result": "",
       "overview": "사용자 맞춤 영화 추천 서비스",
       "skills": ["Vue2.js", "Bootstrap"],
+      "link": [
+        "../../../assets/Vuelogo.png",
+        "../../../assets/Bootstraplogo.png"
+      ],
       "skillsReason": [
         "사용자 경험을 위해 SPA를 구현하고자 했고, 첫 웹 개발을 함에 있어 직관적인 문법을 통해 비교적 낮은 진입장벽을 요구하기에 Vue를 선택했습니다.",
         "가장 유명하고 사용하기 쉬우며 반응형 웹사이트를 구현하기 위해 사용했습니다"
@@ -23,10 +28,19 @@
       "e_name": "Zzalu",
       "k_name": "짤루",
       "starttime": "2023-01-03",
-      "result": "우수상",
       "endtime": "2023-02-17",
+      "Week": "7주",
+      "result": "우수상",
       "overview": "GIF를 활용한 모바일 웹 SNS 서비스",
       "skills": ["Vue3.js", "Tailwind", "PostCSS", "Figma", "Jira", "GitLab"],
+      "link": [
+        "../../../assets/Vuelogo.png",
+        "../../../assets/Tailwindlogo.png",
+        "../../../assets/PostCSSlogo.png",
+        "../../../assets/Figmalogo.png",
+        "../../../assets/Jiralogo.png",
+        "../../../assets/GitLablogo.png"
+      ],
       "skillsReason": [
         "Vue3를 협업에서 어떤식으로 사용하는지에 대해 React로 프로젝트를 진행 하기 전에 정확하게 알고 사용하고 싶어서 사용했습니다. 실제로 Vuex의 Store 모듈화를 통해 원활한 협업을 진행했습니다.",
         "Tailwind는 Bootstrap보다 높은 자유도를 제공해주며 2022년 기준 CSS 프레임워크 사용 만족도 1위를 달리고 있어 사용했습니다. 개인적으로 굉장히 만족하는 프레임워크입니다.",
@@ -44,18 +58,29 @@
       "e_name": "Returnz",
       "k_name": "리턴즈",
       "starttime": "2023-02-20",
-      "result": "우수상",
       "endtime": "2023-04-07",
+      "Week": "7주",
+      "result": "우수상",
       "overview": "과거 데이터 기반 모의 주식 투자 게임 서비스",
       "skills": [
         "React",
         "Redux",
         "React-Query",
-        "Tailwind",
         "styled-components",
+        "Tailwind",
         "GitLab",
         "Figma",
         "Jira"
+      ],
+      "link": [
+        "../../../assets/Reactlogo.png",
+        "../../../assets/Reduxlogo.png",
+        "../../../assets/ReactQuerylogo.png",
+        "../../../assets/StyledComponentslogo.png",
+        "../../../assets/Tailwindlogo.png",
+        "../../../assets/GitLablogo.png",
+        "../../../assets/Figmalogo.png",
+        "../../../assets/Jiralogo.png"
       ],
       "skillsReason": [
         "현재 시장에서 가장 많이 사용하는 프론트엔드 프레임워크이고 다양한 라이브러리와 다양한 정보가 있는 커뮤니티가 활발하게 활동하고 있다는 장점을 가지고 있어 해당 프로젝트에서 React를 사용했습니다.",
@@ -73,20 +98,30 @@
     },
     {
       "id": 4,
-      "e_name": "Buddiary",
+      "e_name": "Bud:Diary",
       "k_name": "버디어리",
       "starttime": "2023-04-10",
-      "result": "",
       "endtime": "2023-05-19",
+      "Week": "6주",
+      "result": "",
       "overview": "키워드 기반 일기메이트 추천 서비스",
       "skills": [
         "React",
         "Redux",
-        "Tailwind",
         "styled-components",
+        "Tailwind",
         "GitLab",
         "Figma",
         "Jira"
+      ],
+      "link": [
+        "../../../assets/Reactlogo.png",
+        "../../../assets/Reduxlogo.png",
+        "../../../assets/StyledComponentslogo.png",
+        "../../../assets/Tailwindlogo.png",
+        "../../../assets/GitLablogo.png",
+        "../../../assets/Figmalogo.png",
+        "../../../assets/Jiralogo.png"
       ],
       "skillsReason": [
         "리액트",

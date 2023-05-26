@@ -9,7 +9,7 @@ export default function FrontCards(props) {
     <CardContainer time={time} run={props.run}>
       <div className="flex items-end">
         <img src={link} alt={link} className="h-10 w-10 mr-4" />
-        {skill.name}
+        {skill.name} <span className="text-xs ml-2">{skill.level}</span>
       </div>
       <ProgressBox>
         <ProgressBar barvalue={skill.value} time={time} run={props.run} />
@@ -57,10 +57,12 @@ const ProgressBar = styled.div`
   @keyframes skillprogressbar {
     0% {
       transform: translateX(-115%);
-    },
+    }
+    ,
     33.3% {
       transform: translateX(0%);
-    },
+    }
+    ,
     66.6% {
       transform: translateX(-25%);
     }

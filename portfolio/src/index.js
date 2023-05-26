@@ -10,6 +10,7 @@ import MainPage from "./pages/MainPage";
 import IntroPage from "./pages/IntroPage";
 import ProjectPage from "./pages/ProjectPage";
 import OtherPage from "./pages/OtherPage";
+import DetailPage from "./pages/DetailPage";
 
 const root = createRoot(document.getElementById("root"));
 
@@ -21,6 +22,7 @@ root.render(
           <Route index element={<IntroPage />} />
           <Route path="home" element={<MainPage />} />
           <Route path="project" element={<ProjectPage />} />
+          <Route path="project/:id" element={<DetailPage />} />
           <Route path="other" element={<OtherPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />

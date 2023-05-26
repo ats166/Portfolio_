@@ -17,7 +17,7 @@ export default function OtherCards(props) {
   );
 }
 const CardContainer = styled.div`
-  ${tw`w-[20%] mx-4 border-2 border-my-blue p-4 rounded-xl`}
+  ${tw`w-[20%] mx-4 border-2 border-my-blue p-4 rounded-xl hover:opacity-50`}
 
   animation-name : upcard;
   animation-delay: ${(props) => props.time}s;

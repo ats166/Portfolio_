@@ -10,10 +10,12 @@ import Buddiary from "../../assets/Buddiary.gif";
 import Nosignal from "../../assets/Nosignal.png";
 import NosignalM from "../../assets/NosignalM.png";
 import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 export default function Csection() {
   const [ref, inView] = useInView({ threshold: 0.7 });
   const [run, setRun] = useState("paused");
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (inView) {
@@ -40,6 +42,10 @@ export default function Csection() {
     setSelectNum(n);
   };
 
+  const handleGoDetail = () => {
+    navigate(`/project/${selectNum}`);
+  };
+
   return (
     <SectionContainer ref={ref}>
       <LeftSection run={run}>
@@ -48,8 +54,12 @@ export default function Csection() {
         <ParentIphone src={iphone} alt="핸드폰" />
         <ChildIphone src={myProject[selectNum][1]} alt="화면" />
         <ProjectIntroduce>
-          <ProjectOverview>{myProject[selectNum][2]}</ProjectOverview>
-          <ProjectName>{myProject[selectNum][3]}</ProjectName>
+          <ProjectOverview onClick={handleGoDetail}>
+            {myProject[selectNum][2]}
+          </ProjectOverview>
+          <ProjectName onClick={handleGoDetail}>
+            {myProject[selectNum][3]}
+          </ProjectName>
         </ProjectIntroduce>
         <RadioButtonBox>
           <SelectButton

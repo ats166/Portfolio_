@@ -1,29 +1,55 @@
 import React from "react";
+import tw, { styled } from "twin.macro";
+
+import WillumpTV from "../../assets/WillumpTV.jpg";
+import Returnz from "../../assets/returnz.gif";
+import Zzalu from "../../assets/zzalu.gif";
+import Buddiary from "../../assets/Buddiary.gif";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectItem(props) {
+  const navigate = useNavigate();
   const project = props.data;
-  // const e_name = props.data.e_name;
-  // const k_name = props.data.k_name;
-  // const starttime = props.data.starttime;
-  // const endtime = props.data.endtime;
-  // const role = props.data.role;
-  // const contribution = props.data.contribution;
-  // const overview = props.data.overview;
-  // const skills = props.data.skills;
-  // const skillsReason = props.data.skillsReason;
-  // const result = props.data.result;
+  const id = project.id - 1;
+  const img = [WillumpTV, Zzalu, Returnz, Buddiary];
+
+  const handleGoDetail = () => {
+    navigate(`/project/${id}`);
+  };
 
   return (
-    <>
-      <div>
-        {project.e_name}, {project.k_name}, {project.starttime} ~{" "}
-        {project.endtime}, {project.role}, {project.contribution},{" "}
-        {project.personnel}명
+    <CardContainer onClick={handleGoDetail}>
+      {id === 1 ? (
+        <img
+          src={img[id]}
+          alt="사진"
+          className="w-[50%] mx-auto border border-black h-[30vh]"
+        />
+      ) : (
+        <img
+          src={img[id]}
+          alt="사진"
+          className="w-full border border-black h-[30vh]"
+        />
+      )}
+      <div className="mt-4 w-full text-center text-xl font-bold">
+        {project.k_name}({project.e_name})
       </div>
-      <div> {project.overview}</div>
-      <div> {project.skills}</div>
-      <div> {project.skillsReason}</div>
-      <div> {project.result}</div>
-    </>
+      <div className="flex flex-wrap justify-center my-2">
+        {project.skills.map((data, idx) => (
+          <img
+            src={project.link[idx]}
+            alt="사진"
+            key={idx}
+            className="w-6 h-6 mx-2"
+          />
+        ))}
+      </div>
+      <div className="w-full text-center mt-2"> {project.overview}</div>
+    </CardContainer>
   );
 }
+
+const CardContainer = styled.div`
+  ${tw`w-[40%] m-12 font-intro`}
+`;
