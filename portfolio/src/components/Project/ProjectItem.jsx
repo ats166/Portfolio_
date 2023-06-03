@@ -11,14 +11,15 @@ export default function ProjectItem(props) {
   const navigate = useNavigate();
   const project = props.data;
   const id = project.id - 1;
+  const time = project.id / 10;
   const img = [WillumpTV, Zzalu, Returnz, Buddiary];
 
   const handleGoDetail = () => {
-    navigate(`/project/${id}`);
+    navigate(`/project/${id}`, { state: { data: project } });
   };
 
   return (
-    <CardContainer onClick={handleGoDetail}>
+    <CardContainer onClick={handleGoDetail} time={time}>
       {id === 1 ? (
         <img
           src={img[id]}
@@ -52,4 +53,9 @@ export default function ProjectItem(props) {
 
 const CardContainer = styled.div`
   ${tw`w-[40%] m-12 font-intro`}
+
+  animation-name : upcard;
+  animation-delay: ${(props) => props.time}s;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
 `;

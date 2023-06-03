@@ -1,11 +1,18 @@
 import React from "react";
 import tw, { styled } from "twin.macro";
-import Construction from "../components/Construction";
+import { useLocation } from "react-router-dom";
+import ProjectASection from "../components/Project/ProjectASection";
 
 export default function DetailPage() {
+  const location = useLocation();
+
+  const data = location.state.data;
+
+  console.log(data);
+
   return (
     <Container>
-      <Construction />
+      <ProjectASection data={data} />
     </Container>
   );
 }

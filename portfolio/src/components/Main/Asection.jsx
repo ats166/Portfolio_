@@ -122,7 +122,7 @@ export default function Asection() {
 }
 
 const GoIntro = styled.button`
-  ${tw`fixed bottom-8 right-20 border-2 p-2 font-mmf rounded-xl bg-gray-400 text-white`}
+  ${tw`fixed bottom-8 right-20 border-2 p-2 font-mmf rounded-xl bg-gray-400 text-white z-20`}
 `;
 
 const GoTop = styled.button`

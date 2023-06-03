@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import tw, { styled } from "twin.macro";
 
 export default function IntroPage() {
   const navigate = useNavigate();
-  setTimeout(() => {
-    navigate(`/home`);
-  }, 27000);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      navigate(`/home`);
+    }, 18750);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   const handleGoMain = () => {
     navigate(`/home`);
   };
   return (
     <IntroContainer>
-      {/* <GoMain onClick={handleGoMain}> Skip </GoMain> */}
+      <GoMain onClick={handleGoMain}> >> </GoMain>
+      <ProgressBar></ProgressBar>
       {/* 블라인드 섹션 */}
       <FirstBlind>
         <FirstLeftBlind></FirstLeftBlind>
@@ -42,11 +50,9 @@ export default function IntroPage() {
         <FirstTextBox>
           <TopText>안녕하세요</TopText>
 
-          <MiddleText time={8.8}>사용자 경험을 먼저 생각하는</MiddleText>
-          <MiddleText time={11.8}>
-            새로운 기술을 배우는 것을 좋아하는
-          </MiddleText>
-          <MiddleText time={14.8}>
+          <MiddleText time={5.8}>사용자 경험을 먼저 생각하는</MiddleText>
+          <MiddleText time={7.8}>새로운 기술을 배우는 것을 좋아하는</MiddleText>
+          <MiddleText time={9.8}>
             CSS 애니메이션을 구현하는것을 즐기는
           </MiddleText>
 
@@ -70,7 +76,24 @@ export default function IntroPage() {
 }
 
 const GoMain = styled.button`
-  ${tw`fixed bottom-12 right-32 border-2 p-2 bg-white h-8 w-20 rounded-xl z-20`}
+  ${tw`fixed bottom-10 right-28 border-2 font-bold bg-white h-8 w-12 rounded-xl z-20`}
+`;
+
+const ProgressBar = styled.div`
+  ${tw`fixed bottom-0 h-4 border-2 z-10 bg-gray-200`}
+
+  animation-name: progressbar;
+  animation-duration: 18.75s;
+  animation-timing-function: linear;
+
+  @keyframes progressbar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
 `;
 
 const IntroContainer = styled.div`
@@ -106,7 +129,7 @@ const FirstLeftBlind = styled.div`
   width:50vw;
 
   animation-name: openleftdoor;
-  animation-delay: 25.5s;
+  animation-delay: 18s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -116,7 +139,7 @@ const FirstRightBlind = styled.div`
   width:50vw;
 
   animation-name: openrightdoor;
-  animation-delay: 25.5s;
+  animation-delay: 18s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -132,7 +155,7 @@ const SecondLeftBlind = styled.div`
   width:50vw;
 
   animation-name: openleftdoor;
-  animation-delay: 25.25s;
+  animation-delay: 17.75s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -142,7 +165,7 @@ const SecondRightBlind = styled.div`
   width:50vw;
 
   animation-name: openrightdoor;
-  animation-delay: 25.25s;
+  animation-delay: 17.75s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -158,7 +181,7 @@ const ThirdLeftBlind = styled.div`
   width:50vw;
 
   animation-name: openleftdoor;
-  animation-delay: 25s;
+  animation-delay: 17.5s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -168,7 +191,7 @@ const ThirdRightBlind = styled.div`
   width:50vw;
 
   animation-name: openrightdoor;
-  animation-delay: 25s;
+  animation-delay: 17.5s;
   animation-duration: 1s;
   animation-fill-mode: both;
 `;
@@ -180,7 +203,7 @@ const FirstTextContainer = styled.div`
 `;
 
 const FirstTextBox = styled.div`
-  ${tw`text-white relative text-8xl`}
+  ${tw`text-white relative text-6xl`}
 
   @keyframes hideandshow {
     0% {
@@ -228,7 +251,7 @@ const FirstBox = styled.div`
 
   animation-name: hideandshow;
   animation-duration: 2s;
-  animation-delay: 3.95s;
+  animation-delay: 1.95s;
   animation-fill-mode: both;
 `;
 
@@ -238,7 +261,7 @@ const SecondBox = styled.div`
 
   animation-name: hideandshow;
   animation-duration: 2s;
-  animation-delay: 4s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 `;
 
@@ -248,13 +271,13 @@ const ThirdBox = styled.div`
 
   animation-name: hideandshow;
   animation-duration: 2s;
-  animation-delay: 4.05s;
+  animation-delay: 2.05s;
   animation-fill-mode: both;
 `;
 
 const Text = styled.p`
   animation-name: showtext;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: both;
 `;
 
@@ -265,7 +288,7 @@ const TopText = styled.div`
 
   animation-name: uptext, moreuptext, deleteall;
   animation-duration: 1s, 1s, 1.5s;
-  animation-delay: 6s, 18s, 24s;
+  animation-delay: 4s, 12s, 16s;
   animation-fill-mode: both, both, forwards;
 
   @keyframes uptext {
@@ -290,10 +313,10 @@ const TopText = styled.div`
 `;
 
 const MiddleText = styled.div`
-  ${tw`absolute w-full text-center text-6xl mt-4`}
+  ${tw`absolute w-full text-center text-4xl mt-6`}
 
   animation-name: sidemove;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: ${(props) => props.time}s;
   animation-fill-mode: both;
 
@@ -318,10 +341,10 @@ const MiddleText = styled.div`
 `;
 
 const MiddleTextSecond = styled.div`
-  ${tw`text-6xl text-center absolute w-full opacity-0`}
+  ${tw`text-4xl text-center absolute w-full opacity-0`}
 
   animation-name : ${(props) => props.name}, deleteall;
-  animation-delay: 19s, 24s;
+  animation-delay: 13s, 16s;
   animation-duration: 1.5s, 1.5s;
   animation-fill-mode: both, forwards;
 
@@ -343,52 +366,28 @@ const MiddleTextSecond = styled.div`
     }
     10% {
       opacity: 1;
-      transform: translateY(120%);
+      transform: translateY(85%);
     }
     20% {
-      transform: translateY(90%);
+      transform: translateY(170%);
     }
     25% {
-      transform: translateY(120%);
+      transform: translateY(170%);
     }
     30% {
-      transform: translateY(100%);
+      transform: translateY(170%);
     }
     35% {
-      transform: translateY(120%);
+      transform: translateY(170%);
     }
     40% {
-      transform: translateY(105%);
+      transform: translateY(150%);
     }
-    45% {
+    44% {
       transform: translateY(120%);
     }
-    50% {
-      transform: translateY(110%);
-    }
-    55% {
-      transform: translateY(120%);
-    }
-    60% {
-      transform: translateY(112%);
-    }
-    65% {
-      transform: translateY(120%);
-    }
-    70% {
-      transform: translateY(114%);
-    }
-    75% {
-      transform: translateY(120%);
-    }
-    80% {
-      transform: translateY(115%);
-    }
-    85% {
-      transform: translateY(120%);
-    }
-    90% {
-      transform: translateY(116%);
+    52% {
+      transform: translateY(130%);
     }
     95% {
       transform: translateY(120%);
@@ -406,22 +405,22 @@ const MiddleTextSecond = styled.div`
     }
     20% {
       opacity: 1;
-      transform: translateY(240%);
+      transform: translateY(290%);
     }
     30% {
-      transform: translateY(210%);
+      transform: translateY(290%);
     }
     35% {
-      transform: translateY(240%);
+      transform: translateY(290%);
     }
     40% {
-      transform: translateY(220%);
+      transform: translateY(290%);
     }
     44% {
-      transform: translateY(240%);
+      transform: translateY(260%);
     }
     48% {
-      transform: translateY(225%);
+      transform: translateY(210%);
     }
     52% {
       transform: translateY(240%);
@@ -430,24 +429,6 @@ const MiddleTextSecond = styled.div`
       transform: translateY(230%);
     }
     61% {
-      transform: translateY(240%);
-    }
-    66% {
-      transform: translateY(232%);
-    }
-    72% {
-      transform: translateY(240%);
-    }
-    78% {
-      transform: translateY(234%);
-    }
-    83% {
-      transform: translateY(240%);
-    }
-    87% {
-      transform: translateY(235%);
-    }
-    93% {
       transform: translateY(240%);
     }
     100% {
@@ -463,13 +444,13 @@ const BottomText = styled.div`
 
   animation-name: upbottomtext, donwbottomtext, deleteall;
   animation-duration: 2s, 1s, 1.5s;
-  animation-delay: 6.3s, 18s, 24s;
+  animation-delay: 4s, 12s, 16s;
   animation-fill-mode: both, both, forwards;
 
   @keyframes upbottomtext {
     0% {
       opacity: 0;
-      transform: translateY(50%);
+      transform: translateY(100%);
       ${tw`mt-0`}
     }
     50% {
@@ -490,10 +471,10 @@ const BottomText = styled.div`
 
   @keyframes donwbottomtext {
     0% {
-      ${tw`mt-24`}
+      transform: translateY(0%);
     }
     100% {
-      ${tw`mt-60`}
+      transform: translateY(140%);
     }
   }
 `;
