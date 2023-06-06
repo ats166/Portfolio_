@@ -11,6 +11,7 @@ import Nosignal from "../../assets/Nosignal.png";
 import NosignalM from "../../assets/NosignalM.png";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
+import project from "../../assets/Project.json";
 
 export default function Csection() {
   const [ref, inView] = useInView({ threshold: 0.7 });
@@ -26,24 +27,27 @@ export default function Csection() {
   }, [inView]);
 
   const myProject = [
+    [WillumpTV, NosignalM, "사용자 맞춤 영화 추천 서비스", "Willump TV"],
+    [Nosignal, zzalu, "GIF를 활용한 모바일 웹 SNS 서비스", "Zzalu"],
     [
       returnz,
       NosignalM,
       "과거 데이터 기반 모의주식 투자 게임 서비스",
       "Returnz",
     ],
-    [Nosignal, zzalu, "GIF를 활용한 모바일 웹 SNS 서비스", "Zzalu"],
     [Buddiary, BuddiaryM, "키워드 기반 교환일기메이트 추천 서비스", "Buddiary"],
-    [WillumpTV, NosignalM, "사용자 맞춤 영화 추천 서비스", "Willump TV"],
   ];
-  const [selectNum, setSelectNum] = useState(0);
+  const [selectNum, setSelectNum] = useState(1);
 
   const handleSelectNum = (n) => {
     setSelectNum(n);
   };
 
   const handleGoDetail = () => {
-    navigate(`/project/${selectNum}`);
+    console.log(project.ProjectList[selectNum]);
+    navigate(`/project/${selectNum}`, {
+      state: { data: project.ProjectList[selectNum] },
+    });
   };
 
   return (

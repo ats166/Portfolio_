@@ -11,7 +11,14 @@ export default function FrontSKills(props) {
     <SkillsContainer>
       <div className="flex flex-col justify-evenly h-full">
         {skill.map((data, idx) => (
-          <FrontCards data={data} idx={idx} run={props.run} key={data.id} />
+          <>
+            <FrontCards
+              data={data}
+              key={data.id}
+              idx={idx}
+              run={props.run}
+            ></FrontCards>
+          </>
         ))}
       </div>
     </SkillsContainer>

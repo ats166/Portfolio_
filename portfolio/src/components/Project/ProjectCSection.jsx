@@ -1,28 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import tw, { styled } from "twin.macro";
 
 export default function ProjectCSection(props) {
-  // 기획배경 및 서비스소개(사진)
-  console.log(props.data, "dd");
+  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [run, setRun] = useState("paused");
+
+  useEffect(() => {
+    if (inView) {
+      setRun("running");
+    } else {
+    }
+  }, [inView]);
+
   return (
-    <Container>
+    <Container ref={ref}>
       <ContentContainer>
-        <PlanningSection>How I did?</PlanningSection>
+        <PlanningSection run={run}>How I did?</PlanningSection>
         <PlanningItemList>
           {props.data.troublename.map((item, idx) => (
             <div key={idx}>
-              <TroubleName>
+              <TroubleName run={run} time={idx / 2 + 0.5}>
                 이슈 {idx + 1}. {item}{" "}
               </TroubleName>
-              <TroubleReason>
+              <TroubleReason run={run} time={idx / 2 + 0.6}>
                 <LittleTitle>이슈 내용</LittleTitle>
                 <ContentBox>{props.data.troublereason[idx]}</ContentBox>
               </TroubleReason>
-              <TroubleAnswer>
+              <TroubleAnswer run={run} time={idx / 2 + 0.7}>
                 <LittleTitle>해결 방법</LittleTitle>
                 <ContentBox>{props.data.troubleanswer[idx]}</ContentBox>
               </TroubleAnswer>
-              <TroubleImage>
+              <TroubleImage run={run} time={idx / 2 + 0.8}>
                 {props.data.troubleimg[idx] === "" ? null : (
                   <img src={props.data.troubleimg[idx]} alt="" />
                 )}
@@ -46,6 +55,12 @@ const ContentContainer = styled.div`
 
 const PlanningSection = styled.div`
   ${tw`mt-[4%] text-8xl text-center`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const PlanningItemList = styled.div`
@@ -54,10 +69,22 @@ const PlanningItemList = styled.div`
 
 const TroubleName = styled.div`
   ${tw`text-4xl mt-[5%] font-bold`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const TroubleReason = styled.div`
   ${tw``}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const LittleTitle = styled.div`
@@ -72,10 +99,22 @@ const ContentBox = styled.div`
 
 const TroubleAnswer = styled.div`
   ${tw`mt-[5%]`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const TroubleImage = styled.div`
   ${tw``}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const BackGround = styled.div`

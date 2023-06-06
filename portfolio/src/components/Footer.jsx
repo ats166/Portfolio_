@@ -6,7 +6,9 @@ export default function Footer(props) {
     <Container>
       <Section>
         본페이지는 웹페이지에 최적화 되어있습니다
-        <div>마지막 업데이트 : 2023. 06. 03</div>
+        <div className="h-[100%] mt-16 text-right">
+          Last Update. 2023. 06. 07
+        </div>
       </Section>
     </Container>
   );

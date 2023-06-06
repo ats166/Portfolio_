@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import tw, { styled } from "twin.macro";
 
 export default function ProjectBSection(props) {
+  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [run, setRun] = useState("paused");
+
+  useEffect(() => {
+    if (inView) {
+      setRun("running");
+    } else {
+    }
+  }, [inView]);
+
   return (
-    <Container>
+    <Container ref={ref}>
       <ContentContainer>
-        <PlanningSection>서비스 소개</PlanningSection>
-        <PlanningBox>{props.data}</PlanningBox>
-        <ContentImgSection></ContentImgSection>
+        <PlanningSection run={run}>서비스 소개</PlanningSection>
+        <PlanningBox run={run} time={0.3}>
+          {props.data}
+        </PlanningBox>
+        <ContentImgSection run={run} time={0.6}></ContentImgSection>
       </ContentContainer>
       <BackGround />
     </Container>
@@ -24,12 +37,35 @@ const ContentContainer = styled.div`
 
 const PlanningSection = styled.div`
   ${tw`mt-[4%] ml-[5%] mb-[2%] text-6xl max-h-[10%]`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
+
+  @keyframes Tuptext {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 const PlanningBox = styled.div`
   ${tw`text-2xl max-h-[20%]`}
   white-space: pre-line;
   line-height: 50px;
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const BackGround = styled.div`
@@ -38,4 +74,10 @@ const BackGround = styled.div`
 
 const ContentImgSection = styled.div`
   ${tw`border border-black h-[80%]`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;

@@ -1,13 +1,24 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import tw, { styled } from "twin.macro";
 import PFimg from "../../assets/PF.jpg";
 import Hamburger from "../../assets/hambuger.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [active, setActive] = useState(0);
   const [openModal, setOpenModal] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname === "/home") {
+      setActive(0);
+    } else if (location.pathname === "/project") {
+      setActive(1);
+    } else if (location.pathname === "/other") {
+      setActive(2);
+    }
+  }, [location.pathname]);
 
   const handleGoMain = () => {
     navigate(`/home`);
@@ -35,9 +46,9 @@ export default function Navbar() {
 
   return (
     <NavContainer>
-      <ImgContainer onClick={handleGoMain}>
-        <ImgBox src={PFimg} />
-        <TextBox>김준영's Portfolio</TextBox>
+      <ImgContainer>
+        <ImgBox src={PFimg} onClick={handleGoMain} />
+        <TextBox onClick={handleGoMain}>김준영's Portfolio</TextBox>
       </ImgContainer>
       <MenuContanier>
         <MenuItem onClick={handleGoMain} active={active} num={0}>
@@ -83,7 +94,7 @@ const NavContainer = styled.div`
   min-height: 42px;
 `;
 
-const ImgContainer = styled.button`
+const ImgContainer = styled.div`
   ${tw`flex items-center`}
   width:70%;
 
@@ -97,10 +108,13 @@ const ImgBox = styled.img`
   ${tw`mx-2`}
   height:5vh;
   min-height: 42px;
+  cursor: pointer;
 `;
 
 const TextBox = styled.div`
   ${tw`text-2xl `}
+  cursor : pointer;
+
   @media screen and (max-width: 480px) {
     ${tw`text-sm`}
   }

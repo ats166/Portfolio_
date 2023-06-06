@@ -23,33 +23,33 @@ export default function ProjectASection(props) {
         <ImageBox src={img[props.data.id - 1]} alt="사진" />
       </ImageContainer>
       <ContentContainer>
-        <TitleSection>
+        <TitleSection time={0.1}>
           <TitleEHead>{data.e_name}</TitleEHead>
           <TitleKHead>({data.k_name})</TitleKHead>
         </TitleSection>
 
-        <OverViewSection>
+        <OverViewSection time={0.2}>
           <OverViewBox>{data.overview}</OverViewBox>
         </OverViewSection>
 
-        <DurationSection>
+        <DurationSection time={0.3}>
           <DurationHead>기간</DurationHead>
           <DurationBox>
             - {data.starttime} ~ {data.endtime}({data.Week})
           </DurationBox>
         </DurationSection>
 
-        <PersonSection>
+        <PersonSection time={0.4}>
           <PersonHead>인원</PersonHead>
           <PersonBox>- {data.personnel}</PersonBox>
         </PersonSection>
 
-        <ContributionSection>
+        <ContributionSection time={0.5}>
           <ContributionHead>기여도</ContributionHead>
           <ContributionBox>- {data.contribution}</ContributionBox>
         </ContributionSection>
 
-        <SkillSection>
+        <SkillSection time={0.6}>
           <SkillHead>사용 기술</SkillHead>
           <SkillBox>
             {data.link.map((item, idx) => (
@@ -61,7 +61,7 @@ export default function ProjectASection(props) {
           </SkillBox>
         </SkillSection>
 
-        <FunctionContainer>
+        <FunctionContainer time={0.7}>
           <FunctionSection>
             <FunctionHead>서비스 전체 기능</FunctionHead>
             {data.function.category.map((func, idx) => (
@@ -99,6 +99,31 @@ const Container = styled.div`
 
 const ImageContainer = styled.div`
   ${tw`w-[45%] mr-[4%] ml-[1%] h-[90vh] flex justify-center items-center`}
+
+  animation-name:left-appear;
+  animation-duration: 1s;
+
+  @keyframes left-appear {
+    0% {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes right-appear {
+    0% {
+      opacity: 0;
+      transform: translateX(10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
 `;
 
 const ImageBox = styled.img`
@@ -106,11 +131,16 @@ const ImageBox = styled.img`
 `;
 
 const ContentContainer = styled.div`
-  ${tw`w-[50%] h-[90vh] flex flex-col justify-center px-12`}
+  ${tw`w-[50%] h-[90vh] flex flex-col justify-center px-12 overflow-hidden`}
 `;
 
 const TitleSection = styled.div`
   ${tw`flex items-end `}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
 `;
 
 const TitleEHead = styled.div`
@@ -123,6 +153,11 @@ const TitleKHead = styled.div`
 
 const OverViewSection = styled.div`
   ${tw`mt-2 mb-8`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
 `;
 
 const OverViewBox = styled.div`
@@ -131,6 +166,11 @@ const OverViewBox = styled.div`
 
 const DurationSection = styled.div`
   ${tw`mb-4`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
 `;
 const DurationHead = styled.div`
   ${tw`text-lg font-bold`}
@@ -142,6 +182,11 @@ const DurationBox = styled.div`
 
 const PersonSection = styled.div`
   ${tw`mb-4`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
 `;
 
 const PersonHead = styled.div`
@@ -154,6 +199,15 @@ const PersonBox = styled.div`
 
 const ContributionSection = styled.div`
   ${tw`mb-4`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const ContributionHead = styled.div`
@@ -166,6 +220,15 @@ const ContributionBox = styled.div`
 
 const SkillSection = styled.div`
   ${tw`mb-4`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const SkillHead = styled.div`
@@ -190,10 +253,15 @@ const SkillName = styled.div`
 
 const FunctionContainer = styled.div`
   ${tw`flex`}
+
+  animation-name:right-appear;
+  animation-duration: 1s;
+  animation-delay: ${(props) => props.time}s;
+  animation-fill-mode: both;
 `;
 
 const FunctionSection = styled.div`
-  ${tw`min-w-[25%]`}
+  ${tw`min-w-[25%] `}
 `;
 
 const FunctionHead = styled.div`
@@ -205,7 +273,7 @@ const FunctionDetail = styled.div`
 `;
 
 const FunctionBox = styled.div`
-  ${tw`ml-4 border border-my-blue py-1 text-center`}
+  ${tw`ml-4 border border-my-blue py-1 text-center min-h-[12px] overflow-hidden`}
   ${(props) =>
     props.select === props.id ? tw`text-white bg-my-blue` : tw`text-my-blue`}
   cursor: pointer;

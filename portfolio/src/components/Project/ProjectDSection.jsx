@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import tw, { styled } from "twin.macro";
 
 export default function ProjectDSection(props) {
-  console.log("D", props.data);
+  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [run, setRun] = useState("paused");
+
+  useEffect(() => {
+    if (inView) {
+      setRun("running");
+    } else {
+    }
+  }, [inView]);
+
   return (
-    <Container>
+    <Container ref={ref}>
       <ContentContainer>
-        <RetrospectSection>프로젝트 회고</RetrospectSection>
+        <RetrospectSection run={run}>프로젝트 회고</RetrospectSection>
         {props.data.othername.map((item, idx) => (
           <div key={idx}>
-            <RetrospectTitle>{item}</RetrospectTitle>
-            <RetrospectContent>
+            <RetrospectTitle run={run} time={idx/2 + 0.3}>
+              {item}
+            </RetrospectTitle>
+            <RetrospectContent run={run} time={idx/2 + 0.6}>
               {props.data.othercontent[idx]}
             </RetrospectContent>
           </div>
@@ -31,16 +43,34 @@ const ContentContainer = styled.div`
 
 const RetrospectSection = styled.div`
   ${tw`mt-[4%] text-8xl text-center text-white`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const RetrospectTitle = styled.div`
   ${tw`text-4xl mt-[5%] font-bold text-white`}
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const RetrospectContent = styled.div`
   $${tw`pl-[5%] pt-[4%] border text-xl font-bold`}
   white-space: pre-line;
   line-height:40px;
+
+  animation-name: Tuptext;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: ${(props) => props.time}s;
+  animation-play-state: ${(props) => props.run};
 `;
 
 const BackGround = styled.div`

@@ -10,7 +10,7 @@ export default function OtherSkills() {
       {" "}
       <div className="flex flex-wrap justify-evenly items-center h-full">
         {skill.map((data, idx) => (
-          <OtherCards data={data} idx={idx} />
+          <OtherCards data={data} idx={idx} key={idx} />
         ))}
       </div>
     </SkillsContainer>

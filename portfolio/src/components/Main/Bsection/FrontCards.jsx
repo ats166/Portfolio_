@@ -14,6 +14,9 @@ export default function FrontCards(props) {
       <ProgressBox>
         <ProgressBar barvalue={skill.value} time={time} run={props.run} />
       </ProgressBox>
+      {skill.overview.map((item, idx) => (
+        <SkillContent key={idx}>- {item}</SkillContent>
+      ))}
     </CardContainer>
   );
 }
@@ -40,7 +43,7 @@ const CardContainer = styled.div`
 `;
 
 const ProgressBox = styled.div`
-  ${tw`w-[80%] h-[30%] mt-5 border rounded-full relative overflow-hidden`}
+  ${tw`w-[80%] h-[12%] mt-5 border rounded-full relative overflow-hidden`}
 `;
 
 const ProgressBar = styled.div`
@@ -70,4 +73,9 @@ const ProgressBar = styled.div`
       transform: translateX(-15%);
     }
   }
+`;
+
+const SkillContent = styled.div`
+  ${tw`mx-auto`}
+  line-height:40px;
 `;

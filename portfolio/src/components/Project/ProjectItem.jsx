@@ -13,6 +13,7 @@ export default function ProjectItem(props) {
   const id = project.id - 1;
   const time = project.id / 10;
   const img = [WillumpTV, Zzalu, Returnz, Buddiary];
+  console.log("project", project);
 
   const handleGoDetail = () => {
     navigate(`/project/${id}`, { state: { data: project } });
@@ -56,6 +57,6 @@ const CardContainer = styled.div`
 
   animation-name : upcard;
   animation-delay: ${(props) => props.time}s;
-  animation-duration: 1.5s;
+  animation-duration: 0.8s;
   animation-fill-mode: both;
 `;
