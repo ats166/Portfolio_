@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import tw, { styled } from "twin.macro";
 
-import WillumpTV from "../../assets/WillumpTV.jpg";
-import Returnz from "../../assets/returnz.gif";
-import Zzalu from "../../assets/zzalu.gif";
-import Buddiary from "../../assets/Buddiary.gif";
+import WillumpTV from "./projectassets/WillumpTVThumnail.png";
+import Returnz from "./projectassets/ReturnzThumnail.png";
+import Zzalu from "./projectassets/ZzaluThumnail.png";
+import Buddiary from "./projectassets/BudDiaryThumnail.png";
 import FunctionDetailList from "./FunctionDetailList";
 
 export default function ProjectASection(props) {

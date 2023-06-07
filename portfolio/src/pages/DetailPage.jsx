@@ -26,7 +26,7 @@ export default function DetailPage() {
       <Container ref={ref}>
         <ProjectASection data={data} />
       </Container>
-      <ProjectBSection data={data.summary} />
+      <ProjectBSection data={data} />
       <ProjectCSection data={data.trouble} />
       <ProjectDSection data={data.other} />
     </>

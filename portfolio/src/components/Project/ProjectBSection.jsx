@@ -18,9 +18,18 @@ export default function ProjectBSection(props) {
       <ContentContainer>
         <PlanningSection run={run}>서비스 소개</PlanningSection>
         <PlanningBox run={run} time={0.3}>
-          {props.data}
+          {props.data.summary}
         </PlanningBox>
-        <ContentImgSection run={run} time={0.6}></ContentImgSection>
+        <ContentImgSection run={run} time={0.6}>
+          {props.data.introduceimg.map((item, idx) => (
+            <div key={idx}>
+              <img src={item} alt="" className="w-[100%] h-[25%] " />
+              <div className="w-full text-center mt-4">
+                {props.data.introducetext[idx]}
+              </div>
+            </div>
+          ))}
+        </ContentImgSection>
       </ContentContainer>
       <BackGround />
     </Container>
@@ -32,7 +41,7 @@ const Container = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  ${tw`w-[1152px] mx-auto z-10`}
+  ${tw`w-[1152px] mx-auto z-10 h-full`}
 `;
 
 const PlanningSection = styled.div`
@@ -57,7 +66,7 @@ const PlanningSection = styled.div`
 `;
 
 const PlanningBox = styled.div`
-  ${tw`text-2xl max-h-[20%]`}
+  ${tw`text-2xl max-h-[20%] mb-20`}
   white-space: pre-line;
   line-height: 50px;
 
@@ -73,7 +82,7 @@ const BackGround = styled.div`
 `;
 
 const ContentImgSection = styled.div`
-  ${tw`border border-black h-[80%]`}
+  ${tw`h-[50%] border border-black flex justify-evenly`}
 
   animation-name: Tuptext;
   animation-duration: 1s;

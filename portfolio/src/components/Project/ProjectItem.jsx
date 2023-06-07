@@ -1,10 +1,10 @@
 import React from "react";
 import tw, { styled } from "twin.macro";
 
-import WillumpTV from "../../assets/WillumpTV.jpg";
-import Returnz from "../../assets/returnz.gif";
-import Zzalu from "../../assets/zzalu.gif";
-import Buddiary from "../../assets/Buddiary.gif";
+import WillumpTV from "./projectassets/WillumpTVThumnail.png";
+import Returnz from "./projectassets/ReturnzThumnail.png";
+import Zzalu from "./projectassets/ZzaluThumnail.png";
+import Buddiary from "./projectassets/BudDiaryThumnail.png";
 import { useNavigate } from "react-router-dom";
 
 export default function ProjectItem(props) {
@@ -21,19 +21,12 @@ export default function ProjectItem(props) {
 
   return (
     <CardContainer onClick={handleGoDetail} time={time}>
-      {id === 1 ? (
-        <img
-          src={img[id]}
-          alt="사진"
-          className="w-[50%] mx-auto border border-black h-[30vh]"
-        />
-      ) : (
-        <img
-          src={img[id]}
-          alt="사진"
-          className="w-full border border-black h-[30vh]"
-        />
-      )}
+      <img
+        src={img[id]}
+        alt="사진"
+        className="w-full border rounded-2xl h-[30vh]"
+      />
+
       <div className="mt-4 w-full text-center text-xl font-bold">
         {project.k_name}({project.e_name})
       </div>
