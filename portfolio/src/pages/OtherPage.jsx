@@ -50,21 +50,27 @@ export default function OtherPage() {
           <AwardsDays time={0.4}>2022년 11월 25일</AwardsDays>
         </AwardsItems>
         <AwardsItems>
-          <AwardsName time={0.45}> * 웹 디자인 트랙 프로젝트 우수상 </AwardsName>
+          <AwardsName time={0.45}>
+            {" "}
+            * 웹 디자인 트랙 프로젝트 우수상{" "}
+          </AwardsName>
           <AwardsDetail time={0.5}>
             [삼성 청년 소프트웨어 아카데미] 2학기 공통 프로젝트 광주 1반 1등
           </AwardsDetail>
           <AwardsDays time={0.55}>2023년 2월 17일</AwardsDays>
         </AwardsItems>
         <AwardsItems>
-          <AwardsName time={0.6}> * 빅 데이터 분산 트랙 프로젝트 우수상 </AwardsName>
+          <AwardsName time={0.6}>
+            {" "}
+            * 빅 데이터 분산 트랙 프로젝트 우수상{" "}
+          </AwardsName>
           <AwardsDetail time={0.65}>
             [삼성 청년 소프트웨어 아카데미] 2학기 특화 프로젝트 광주 1반 3등
           </AwardsDetail>
           <AwardsDays time={0.7}>2023년 4월 24일</AwardsDays>
         </AwardsItems>
 
-        <EffortTitle time={0.75}> Effot </EffortTitle>
+        <EffortTitle time={0.75}> Effort </EffortTitle>
         <EffortName time={0.8}>
           {" "}
           * 저의 장점은 성실함을 통한 지속적인 성장입니다.{" "}
@@ -75,7 +81,10 @@ export default function OtherPage() {
           있습니다.
           <img src={github} alt="" />
         </EffortDetail>
-        <EffortName time={0.9}> * CS 스터디 (CSS tudy) 스터디장 활동 중 </EffortName>
+        <EffortName time={0.9}>
+          {" "}
+          * CS 스터디 (CSS tudy) 스터디장 활동 중{" "}
+        </EffortName>
         <EffortName time={0.95}>
           {" "}
           * 1 일 1 알고리즘 스터디 (1D1A) 스터디원 활동 중

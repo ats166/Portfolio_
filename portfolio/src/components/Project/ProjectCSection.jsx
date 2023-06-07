@@ -3,8 +3,10 @@ import { useInView } from "react-intersection-observer";
 import tw, { styled } from "twin.macro";
 
 export default function ProjectCSection(props) {
-  const [ref, inView] = useInView({ threshold: 0.3 });
+  const [ref, inView] = useInView({ threshold: 0.1 });
   const [run, setRun] = useState("paused");
+
+  console.log("c", props.data.troubleimg[1]);
 
   useEffect(() => {
     if (inView) {
@@ -32,7 +34,7 @@ export default function ProjectCSection(props) {
                 <ContentBox>{props.data.troubleanswer[idx]}</ContentBox>
               </TroubleAnswer>
               <TroubleImage run={run} time={idx / 2 + 0.8}>
-                {props.data.troubleimg[idx] === "" ? null : (
+                {props.data.troubleimg[idx] === undefined ? null : (
                   <img src={props.data.troubleimg[idx]} alt="" />
                 )}
               </TroubleImage>
@@ -108,7 +110,8 @@ const TroubleAnswer = styled.div`
 `;
 
 const TroubleImage = styled.div`
-  ${tw``}
+  ${tw`flex justify-evenly my-10`}
+  // ${(props) => (props.being === undefined ? null : tw`h-[30rem]`)}
 
   animation-name: Tuptext;
   animation-duration: 1s;

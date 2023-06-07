@@ -64,7 +64,10 @@
           "vuex-persistedstate 라이브러리를 이용한 state와 localstorage를 지속적으로 동기화를 통해 데이터를 유지시켰습니다.",
           "BootstrapVue에서 제공하는 라이브러리를 통해 효과적으로 다중 영화 캐러셀, 단일 영화 캐러셀을 구현하였습니다."
         ],
-        "troubleimg": []
+        "troubleimg": [
+          "../../../assets/WillumpIssue1.png",
+          "../../../assets/WillumpIssue2.png"
+        ]
       },
       "other": {
         "othername": ["결과", "느낀 점", "신경 썼던 점", "그 외 담당 역할"],
@@ -185,6 +188,20 @@
           ]
         }
       },
+      "introduceimg": [
+        "../../../assets/ZzaluMainPage.gif",
+        "../../../assets/ZzaluDetailPage.gif",
+        "../../../assets/ZzaluChattingRoom.gif",
+        "../../../assets/ZzaluTitleRoom.gif",
+        "../../../assets/ZzaluDarkSearch.gif"
+      ],
+      "introducetext": [
+        "메인페이지",
+        "GIF 디테일 페이지",
+        "고독방(채팅방)",
+        "제목학원",
+        "다크모드 & 검색 모달"
+      ],
       "trouble": {
         "troublename": [
           "채팅방",
@@ -204,7 +221,12 @@
           "- 모바일 웹 특성상 페이지 클릭보단 스크롤을 통해 스크롤이 최하단에 도착 했을 때, 추가적인 데이터를 불러오는게 적절하고 판단했습니다. \n - DOM 조작을 통해 보고 있는 화면이 요소의 제일 바닥인지 확인 후, 추가적인 데이터를 불러오는 함수를 실행하였습니다.",
           "- 매 입력시 마다 서버에 요청을 보내면 서버에 부담이 더해지기 때문에 해당 이슈를 해결하기위해 디바운스와 쓰토를링에 대해 고민했습니다. \n - 이벤트 발생 후 일정시간 동안 다른 이벤트가 발생하지 않으면 마지막 이벤트가 실행되는 디바운스와 이벤트 실행 후 일정 시간동안 동일한 이벤트가 발생하지 않게하는 쓰로틀링 중 검색기능과 디바운스가 더 어울리다고 판단하여 lodash 라이브러리를 통한 디바운스를 구현했습니다."
         ],
-        "troubleimg": []
+        "troubleimg": [
+          "../../../assets/ZzaluIssue1.png",
+          "../../../assets/ZzaluIssue2.gif",
+          "../../../assets/ZzaluIssue3.gif",
+          "../../../assets/ZzaluIssue4.gif"
+        ]
       },
       "other": {
         "othername": ["결과", "배운 점", "그 외 담당 역할"],
@@ -335,6 +357,12 @@
           ]
         }
       },
+      "introduceimg": [
+        "../../../assets/ReturnzMainPage.gif",
+        "../../../assets/ReturnzGame.gif",
+        "../../../assets/ReturnzResult.gif"
+      ],
+      "introducetext": ["메인 페이지", "게임 내부", "게임 결과창"],
       "trouble": {
         "troublename": ["다량의 데이터 처리", "효과적인 시각화"],
         "troublereason": [
@@ -345,7 +373,10 @@
           "다량의 데이터들을 전역상태관리 툴인 Redux를 통한 필요한 데이터끼리 묶어서 효과적으로 관리했습니다.",
           "- 주식 그래프는 ApexChart 라이브러리를 통해 초보자도 쉽게 알아 볼 수 있도록 시각화를 진행하였습니다. \n - 튜토리얼 제공과 각 컴포넌트 별로 도움말을 추가해 해당 컴포넌트가 어떤 정보를 담고 있는지 어떻게 이용하는지에 대해 설명해주었습니다. "
         ],
-        "troubleimg": []
+        "troubleimg": [
+          "../../../assets/ReturnzIssue1.png",
+          "../../../assets/ReturnzIssue2.gif"
+        ]
       },
       "other": {
         "othername": ["결과", "배운 점", "그 외 담당 역할"],
@@ -452,6 +483,12 @@
           "기타": ["완전 반응형 UI", "실시간 알람"]
         }
       },
+      "introduceimg": [
+        "../../../assets/BuddairyMainPage.png",
+        "../../../assets/BuddiaryGroupPage.gif",
+        "../../../assets/BuddiaryMyPage.gif"
+      ],
+      "introducetext": ["메인 페이지", "그룹 일기 페이지", "마이 페이지"],
       "trouble": {
         "troublename": ["요소 드래그 앤 드랍", "완전 반응형 UI"],
         "troublereason": [
@@ -462,7 +499,10 @@
           "Interact.js 라이브러리를 이용하여 스티커를 드래그 앤 드롭을 하였을 때의 스티커 좌표를 추적해 이곳이 일기장의 안인지 밖인지, 안이라면 좌표값을 받아올 수 있도록 구현했습니다.",
           "CSS media screen을 통해 웹, 태블릿, 모바일에 대한 환경에 대처할 수 있도록 개발하였습니다."
         ],
-        "troubleimg": []
+        "troubleimg": [
+          "../../../assets/BuddiaryIssue1.gif",
+          "../../../assets/BuddiaryIssue2.gif"
+        ]
       },
       "other": {
         "othername": ["결과", "배운 점", "아쉬운 점", "그 외 담당 역할"],

@@ -5,6 +5,15 @@ import tw, { styled } from "twin.macro";
 export default function ProjectBSection(props) {
   const [ref, inView] = useInView({ threshold: 0.3 });
   const [run, setRun] = useState("paused");
+  const [mode, SetMode] = useState("web");
+
+  useEffect(() => {
+    if (props.data.e_name === "Zzalu") {
+      SetMode("mobile");
+    } else {
+      SetMode("web");
+    }
+  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -20,16 +29,29 @@ export default function ProjectBSection(props) {
         <PlanningBox run={run} time={0.3}>
           {props.data.summary}
         </PlanningBox>
-        <ContentImgSection run={run} time={0.6}>
-          {props.data.introduceimg.map((item, idx) => (
-            <div key={idx}>
-              <img src={item} alt="" className="w-[100%] h-[25%] " />
-              <div className="w-full text-center mt-4">
-                {props.data.introducetext[idx]}
+        {mode === "mobile" ? (
+          <ContentImgSection run={run} time={0.6}>
+            {props.data.introduceimg.map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <div className="min-h-[20rem] max-h-[20rem] min-w-[10rem] max-w-[10rem] mx-8">
+                  <img src={item} alt="" className="h-full w-full" />
+                </div>
+                <div className="mt-4">{props.data.introducetext[idx]}</div>
               </div>
-            </div>
-          ))}
-        </ContentImgSection>
+            ))}
+          </ContentImgSection>
+        ) : (
+          <ContentImgSection run={run} time={0.6}>
+            {props.data.introduceimg.map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <div className="min-h-[25rem] max-h-[25rem] w-[40rem] mx-8 ">
+                  <img src={item} alt="" className="h-full w-full" />
+                </div>
+                <div className="mt-4">{props.data.introducetext[idx]}</div>
+              </div>
+            ))}
+          </ContentImgSection>
+        )}
       </ContentContainer>
       <BackGround />
     </Container>
@@ -37,7 +59,7 @@ export default function ProjectBSection(props) {
 }
 
 const Container = styled.div`
-  ${tw`relative w-full flex font-intro h-[125vh]`}
+  ${tw`relative w-full flex font-intro h-[100vh]`}
 `;
 
 const ContentContainer = styled.div`
@@ -78,11 +100,27 @@ const PlanningBox = styled.div`
 `;
 
 const BackGround = styled.div`
-  ${tw`absolute inset-0 w-full h-[125vh] z-0 bg-gray-200`}
+  ${tw`absolute inset-0 w-full h-full z-0 bg-gray-200`}
 `;
 
 const ContentImgSection = styled.div`
-  ${tw`h-[50%] border border-black flex justify-evenly`}
+  ${tw`flex h-[30rem] overflow-x-scroll`}
+
+  ::-webkit-scrollbar {
+    height: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 10%;
+    background: #abc4ff;
+
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, 0.1);
+    border-radius: 20px;
+  }
 
   animation-name: Tuptext;
   animation-duration: 1s;

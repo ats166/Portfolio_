@@ -127,7 +127,7 @@ const ImageContainer = styled.div`
 `;
 
 const ImageBox = styled.img`
-  ${tw`mb-24 border-2 border-black`}
+  ${tw`mb-24 `}
 `;
 
 const ContentContainer = styled.div`
@@ -152,7 +152,7 @@ const TitleKHead = styled.div`
 `;
 
 const OverViewSection = styled.div`
-  ${tw`mt-2 mb-8`}
+  ${tw`mt-2 mb-4`}
 
   animation-name:right-appear;
   animation-duration: 1s;
