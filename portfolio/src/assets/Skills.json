@@ -35,7 +35,7 @@
       "name": "TypeScript",
       "value": 40,
       "level": "중하",
-      "link": "../../../assets/TypeScriptlogo.png",
+      "link": "../../../assets/tslogo.png",
       "overview": ["타입스크립트를 이용해 객체지향 프로그래밍을 지향"]
     }
   ],
@@ -64,7 +64,7 @@
     {
       "id": 4,
       "name": "GitLab",
-      "link": "../../../assets/Gitlablogo.png",
+      "link": "../../../assets/gllogo.png",
       "value": null,
       "overview": []
     },
