@@ -95,7 +95,7 @@
         "../../../assets/PostCSSlogo.png",
         "../../../assets/Figmalogo.png",
         "../../../assets/Jiralogo.png",
-        "../../../assets/GitLablogo.png"
+        "../../../assets/gllogo.png"
       ],
       "skillsReason": [
         "Vue3를 협업에서 어떤식으로 사용하는지에 대해 React로 프로젝트를 진행 하기 전에 정확하게 알고 사용하고 싶어서 사용했습니다. 실제로 Vuex의 Store 모듈화를 통해 원활한 협업을 진행했습니다.",
@@ -410,7 +410,7 @@
         "../../../assets/Reduxlogo.png",
         "../../../assets/StyledComponentslogo.png",
         "../../../assets/Tailwindlogo.png",
-        "../../../assets/GitLablogo.png",
+        "../../../assets/gllogo.png",
         "../../../assets/Figmalogo.png",
         "../../../assets/Jiralogo.png"
       ],
