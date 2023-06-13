@@ -247,7 +247,7 @@ const FirstTextBox = styled.div`
 `;
 
 const FirstBox = styled.div`
-  ${tw`absolute text-white text-4xl h-[34%] bg-gray-200 w-full z-10`}
+  ${tw`absolute text-white text-4xl h-[35%] bg-gray-200 w-full z-10`}
 
   animation-name: hideandshow;
   animation-duration: 2s;
@@ -256,7 +256,7 @@ const FirstBox = styled.div`
 `;
 
 const SecondBox = styled.div`
-  ${tw`absolute text-white text-4xl h-[33%] bg-gray-200 w-full overflow-hidden z-10`}
+  ${tw`absolute text-white text-4xl h-[33.33%] bg-gray-200 w-full overflow-hidden z-10`}
   transform: translateY(100%);
 
   animation-name: hideandshow;
@@ -266,7 +266,7 @@ const SecondBox = styled.div`
 `;
 
 const ThirdBox = styled.div`
-  ${tw`absolute text-white text-4xl h-[33%] bg-gray-200 w-full z-10`}
+  ${tw`absolute text-white text-4xl h-[33.33%] bg-gray-200 w-full z-10`}
   transform: translateY(195%);
 
   animation-name: hideandshow;

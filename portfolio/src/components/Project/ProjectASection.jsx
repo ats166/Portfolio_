@@ -98,7 +98,7 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  ${tw`w-[45%] mr-[4%] ml-[1%] h-[90vh] flex justify-center items-center`}
+  ${tw`w-[45%] mr-[4%] ml-[1%] h-[90%] my-auto mx-auto flex`}
 
   animation-name:left-appear;
   animation-duration: 1s;
@@ -131,7 +131,7 @@ const ImageBox = styled.img`
 `;
 
 const ContentContainer = styled.div`
-  ${tw`w-[50%] h-[90vh] flex flex-col justify-center px-12 overflow-hidden`}
+  ${tw`w-[50%] min-h-[100vh] h-full flex flex-col justify-center px-12 overflow-hidden`}
 `;
 
 const TitleSection = styled.div`
@@ -261,11 +261,11 @@ const FunctionContainer = styled.div`
 `;
 
 const FunctionSection = styled.div`
-  ${tw`min-w-[25%] `}
+  ${tw`min-w-[25%]`}
 `;
 
 const FunctionHead = styled.div`
-  ${tw`text-lg font-bold`}
+  ${tw`text-lg font-bold h-8 border-2 overflow-hidden`}
 `;
 
 const FunctionDetail = styled.div`
@@ -273,7 +273,7 @@ const FunctionDetail = styled.div`
 `;
 
 const FunctionBox = styled.div`
-  ${tw`ml-4 border border-my-blue py-1 text-center min-h-[12px] overflow-hidden`}
+  ${tw`ml-4 border border-my-blue py-1 text-center h-8 overflow-hidden`}
   ${(props) =>
     props.select === props.id ? tw`text-white bg-my-blue` : tw`text-my-blue`}
   cursor: pointer;
