@@ -97,6 +97,17 @@ export default function OtherPage() {
 
 const Container = styled.div`
   ${tw`max-w-[1152px] mx-auto font-intro pb-20`}
+
+  @keyframes Tuptext {
+    0% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 `;
 
 const EducationContainer = styled.div`

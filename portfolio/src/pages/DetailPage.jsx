@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function DetailPage() {
   const location = useLocation();
-  const [ref, inView] = useInView({ threshold: 0.9 });
+  const [ref, inView] = useInView({ threshold: 0.5 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -38,5 +38,7 @@ const Container = styled.div`
 `;
 
 const GoTop = styled.button`
-  ${tw`fixed bottom-8 right-40 border-2 p-2 h-12 w-12 rounded-full text-black z-10 bg-my-blue text-white`}
+  ${tw`fixed bottom-8 right-[5%] border-2 p-2 h-12 w-12 rounded-full text-black z-30 bg-my-blue text-white`}
+
+  cursor:pointer;
 `;

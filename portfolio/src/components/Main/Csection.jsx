@@ -104,13 +104,22 @@ export default function Csection() {
 }
 
 const SectionContainer = styled.div`
-  ${tw`h-screen flex`}
+  ${tw`min-h-[100vh] flex`}
+  height:calc(100vh + 200px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`flex flex-col-reverse items-center`}
+  }
 `;
 
 const LeftSection = styled.div`
   ${tw`h-full w-[60%] flex pl-8 items-center`}
 
-  animation-name : Cupimg;
+  @media screen and (max-width: 800px) {
+    ${tw`h-[80%] flex-col`}
+  }
+
+  animation-name: Cupimg;
   animation-duration: 1s;
   animation-delay: 0s;
   animation-play-state: ${(props) => props.run};
@@ -128,26 +137,48 @@ const LeftSection = styled.div`
 `;
 
 const ParentMonitor = styled.img`
-  ${tw`relative min-w-[480px] h-[360px] z-10`}
+  ${tw`relative min-w-[480px] max-h-[360px] w-[60%] z-10`}
+
+  @media screen and (max-width: 800px) {
+    ${tw`min-w-[240px] max-w-[240px] max-h-[180px] mr-[160px]`}
+  }
 `;
 
 const ChildMonitor = styled.img`
   ${tw`absolute min-w-[455px] max-w-[455px] h-[260px] mb-[72px] ml-[14px]`}
+
+  @media screen and (max-width: 800px) {
+    ${tw`min-w-[230px] max-w-[230px] min-h-[135px] max-h-[135px] ml-1 mt-1 mr-[160px]`}
+  }
 `;
 
 const ParentIphone = styled.img`
   ${tw`absolute w-40 z-10`}
   transform: translateX(300%);
+
+  @media screen and (max-width: 800px) {
+    ${tw`absolute w-24 z-10 mr-[160px]`}
+    transform: translate(180%,20%);
+  }
 `;
 
 const ChildIphone = styled.img`
-  ${tw`absolute w-28 h-56 ml-6 rounded-xl`}
+  ${tw`absolute w-28 h-56 ml-6 rounded-xl mr-[160px]`}
   transform: translateX(430%);
+
+  @media screen and (max-width: 800px) {
+    ${tw`absolute w-[64px] h-[135px] rounded-lg`}
+    transform: translate(250%,25%);
+  }
 `;
 
 const ProjectIntroduce = styled.div`
-  ${tw`absolute font-mmf w-[34vw] text-center`}
+  ${tw`absolute font-mmf w-[34vw] text-center `}
   transform : translateY(220px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-full mr-[80px]`}
+  }
 `;
 
 const ProjectOverview = styled.div`
@@ -161,10 +192,14 @@ const ProjectName = styled.div`
 const RadioButtonBox = styled.div`
   ${tw`absolute w-[34vw] flex justify-center`}
   transform : translateY(320px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-full mr-[80px]`}
+  }
 `;
 
 const SelectButton = styled.button`
-  ${tw`w-12 border ml-4 h-12 rounded-xl`}
+  ${tw`w-12 border ml-4 h-12 rounded-xl min-w-[40px]`}
 
   ${(props) => (props.num === props.idx ? tw`bg-my-blue text-white` : null)}
 `;
@@ -176,6 +211,10 @@ const RightSection = styled.div`
   animation-duration: 1.5s;
   animation-delay: 0s;
   animation-play-state: ${(props) => props.run};
+
+  @media screen and (max-width: 800px) {
+    ${tw`m-14 w-full h-[20%]`}
+  }
 
   @keyframes Cuptext {
     0% {

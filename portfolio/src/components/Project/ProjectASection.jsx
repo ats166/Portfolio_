@@ -95,12 +95,20 @@ export default function ProjectASection(props) {
 
 const Container = styled.div`
   ${tw`max-w-[1152px] mx-auto flex font-intro`}
+
+  @media screen and (max-width: 960px) {
+    ${tw`flex-col items-center`}
+  }
 `;
 
 const ImageContainer = styled.div`
   ${tw`w-[45%] mr-[4%] ml-[1%] h-[90%] my-auto mx-auto flex`}
 
-  animation-name:left-appear;
+  @media screen and (max-width: 960px) {
+    ${tw`w-full px-[5%]`}
+  }
+
+  animation-name: left-appear;
   animation-duration: 1s;
 
   @keyframes left-appear {
@@ -132,6 +140,10 @@ const ImageBox = styled.img`
 
 const ContentContainer = styled.div`
   ${tw`w-[50%] min-h-[100vh] h-full flex flex-col justify-center px-12 overflow-hidden`}
+
+  @media screen and (max-width: 960px) {
+    ${tw`flex-col items-start px-12 w-full`}
+  }
 `;
 
 const TitleSection = styled.div`
@@ -204,10 +216,6 @@ const ContributionSection = styled.div`
   animation-duration: 1s;
   animation-delay: ${(props) => props.time}s;
   animation-fill-mode: both;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const ContributionHead = styled.div`
@@ -225,10 +233,6 @@ const SkillSection = styled.div`
   animation-duration: 1s;
   animation-delay: ${(props) => props.time}s;
   animation-fill-mode: both;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
 `;
 
 const SkillHead = styled.div`
@@ -265,7 +269,7 @@ const FunctionSection = styled.div`
 `;
 
 const FunctionHead = styled.div`
-  ${tw`text-lg font-bold h-8 border-2 overflow-hidden`}
+  ${tw`text-lg font-bold h-8 overflow-hidden`}
 `;
 
 const FunctionDetail = styled.div`

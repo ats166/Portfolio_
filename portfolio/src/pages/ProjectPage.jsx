@@ -8,7 +8,7 @@ export default function ProjectPage() {
   return (
     <>
       <Container>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
           {project.ProjectList.map((data) => (
             <ProjectItem data={data} key={data.id} />
           ))}

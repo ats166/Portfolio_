@@ -24,7 +24,7 @@ export default function Asection() {
     }
   }, [inView]);
   return (
-    <>
+    <AContainer>
       {inView === false ? <GoTop onClick={handleGoTop}>▲</GoTop> : null}
       <GoIntro onClick={handleGoIntro}>인트로 다시보기</GoIntro>
       <SectionContainer ref={ref}>
@@ -117,9 +117,13 @@ export default function Asection() {
           </HelperMouse>
         </HelperText>
       </Helper>
-    </>
+    </AContainer>
   );
 }
+
+const AContainer = styled.div`
+  ${tw`min-h-[100vh] `}
+`;
 
 const GoIntro = styled.button`
   ${tw`fixed bottom-8 right-20 border-2 p-2 font-mmf rounded-xl bg-gray-400 text-white z-20`}
@@ -130,11 +134,15 @@ const GoTop = styled.button`
 `;
 
 const SectionContainer = styled.div`
-  ${tw`h-[70vh] flex font-intro`}
+  ${tw`h-[70%] flex font-intro `}
+
+  @media screen and (max-width: 800px) {
+    ${tw`flex-col items-center w-full`}
+  }
 `;
 
 const LeftSection = styled.div`
-  ${tw`w-[240px] h-[90%] ml-[5%]`}
+  ${tw`w-[240px] h-[90%] ml-[5%] `}
 `;
 
 const MarginBox = styled.div`
@@ -302,6 +310,10 @@ const LinkBox = styled.div`
 const RightSection = styled.div`
   ${tw`text-right flex justify-end break-words`}
   width: calc(95% - 240px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`flex-col items-end w-full`}
+  }
 `;
 
 const RightText = styled.div`
@@ -354,7 +366,7 @@ const UnderLine = styled.span`
 `;
 
 const Helper = styled.div`
-  ${tw`h-[20vh] flex justify-center`}
+  ${tw`h-[20%] flex justify-center`}
 
   animation-name: showhelperbox;
   animation-delay: 3s;
@@ -368,6 +380,10 @@ const Helper = styled.div`
     100% {
       opacity: 1;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-full`}
   }
 `;
 

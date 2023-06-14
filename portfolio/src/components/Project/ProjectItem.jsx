@@ -24,7 +24,7 @@ export default function ProjectItem(props) {
       <img
         src={img[id]}
         alt="사진"
-        className="w-full border rounded-2xl h-[30vh]"
+        className="w-full border rounded-2xl h-[70%]"
       />
 
       <div className="mt-4 w-full text-center text-xl font-bold">
@@ -47,8 +47,13 @@ export default function ProjectItem(props) {
 
 const CardContainer = styled.div`
   ${tw`w-[40%] m-12 font-intro`}
+  cursor : pointer;
 
-  animation-name : upcard;
+  @media screen and (max-width: 960px) {
+    ${tw`w-[100%]`}
+  }
+
+  animation-name: upcard;
   animation-delay: ${(props) => props.time}s;
   animation-duration: 0.8s;
   animation-fill-mode: both;

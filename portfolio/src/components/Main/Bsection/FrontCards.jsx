@@ -43,7 +43,7 @@ const CardContainer = styled.div`
 `;
 
 const ProgressBox = styled.div`
-  ${tw`w-[80%] h-[12%] mt-5 border rounded-full relative overflow-hidden`}
+  ${tw`w-[80%] h-[12%] min-h-[12px] mt-5 border rounded-full relative overflow-hidden`}
 `;
 
 const ProgressBar = styled.div`

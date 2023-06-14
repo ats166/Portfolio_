@@ -50,16 +50,30 @@ export default function Bsection() {
 }
 
 const SectionContainer = styled.div`
-  ${tw`h-[100vh] flex`}
+  ${tw`min-h-[100vh] flex `}
+
+  @media screen and (max-width: 800px) {
+    ${tw`flex-col items-center mt-[10%] w-full`}
+  }
 `;
 
 const LeftSection = styled.div`
-  ${tw`w-[40%] h-full flex justify-center items-center pb-[240px] `}
+  ${tw`w-[40%] min-h-full flex justify-center items-center pb-[30%] `}
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-full pb-[10%]`}
+  }
 `;
 
 const Introduce = styled.div`
-  ${tw`text-5xl w-[70%] font-bold break-keep flex items-end`}
-  line-height:80px;
+  ${tw`text-5xl w-[70%] font-bold break-keep flex items-end `}
+
+  @media screen and (max-width: 960px) {
+    ${tw`text-4xl`}
+    line-height: 60px;
+  }
+
+  line-height: 80px;
 
   animation-name: uptext;
   animation-duration: 2s;
@@ -79,11 +93,16 @@ const Introduce = styled.div`
 
 const ToolsGIF = styled.img`
   ${tw`h-24 w-24`}
+  display:inline;
   transform: translateY(15%);
 `;
 
 const RightSection = styled.div`
-  ${tw`w-[60%] h-full`}
+  ${tw`w-[60%] min-h-full min-w-[460px]`}
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-full px-20`}
+  }
 `;
 
 const FrontButton = styled.button`

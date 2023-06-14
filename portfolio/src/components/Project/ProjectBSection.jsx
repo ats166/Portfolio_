@@ -32,8 +32,11 @@ export default function ProjectBSection(props) {
         {mode === "mobile" ? (
           <ContentImgSection run={run} time={0.6}>
             {props.data.introduceimg.map((item, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                <div className="min-h-[20rem] max-h-[20rem] min-w-[10rem] max-w-[10rem] mx-8">
+              <div
+                key={idx}
+                className="flex flex-col items-center min-h-[60%] min-w-[20%] mx-8"
+              >
+                <div className="h-full w-full">
                   <img src={item} alt="" className="h-full w-full" />
                 </div>
                 <div className="mt-4">{props.data.introducetext[idx]}</div>
@@ -43,11 +46,14 @@ export default function ProjectBSection(props) {
         ) : (
           <ContentImgSection run={run} time={0.6}>
             {props.data.introduceimg.map((item, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                <div className="min-h-[25rem] max-h-[25rem] w-[40rem] mx-8 ">
+              <div
+                key={idx}
+                className="flex flex-col items-center min-w-[60%] mx-12"
+              >
+                <div className="w-full">
                   <img src={item} alt="" className="h-full w-full" />
                 </div>
-                <div className="mt-4">{props.data.introducetext[idx]}</div>
+                <div className="my-4">{props.data.introducetext[idx]}</div>
               </div>
             ))}
           </ContentImgSection>
@@ -59,7 +65,7 @@ export default function ProjectBSection(props) {
 }
 
 const Container = styled.div`
-  ${tw`relative w-full flex font-intro h-[100vh]`}
+  ${tw`relative w-full flex font-intro min-h-[100vh] pb-2`}
 `;
 
 const ContentContainer = styled.div`
@@ -104,7 +110,7 @@ const BackGround = styled.div`
 `;
 
 const ContentImgSection = styled.div`
-  ${tw`flex h-[30rem] overflow-x-scroll`}
+  ${tw`flex overflow-x-auto mt-[15%]`}
 
   ::-webkit-scrollbar {
     height: 20px;

@@ -61,7 +61,7 @@ export default function Navbar() {
           Other
         </MenuItem>
       </MenuContanier>
-      <HamburgerMenu onClick={handleOpenModal}>
+      {/* <HamburgerMenu onClick={handleOpenModal}>
         <img src={Hamburger} alt="햄버거" />
       </HamburgerMenu>
       {openModal ? (
@@ -83,7 +83,7 @@ export default function Navbar() {
             </HambugerMenuContanier>
           </SideModalInConatiner>
         </SideModalContainer>
-      ) : null}
+      ) : null} */}
     </NavContainer>
   );
 }
@@ -123,11 +123,10 @@ const TextBox = styled.div`
 const MenuContanier = styled.div`
   ${tw`flex justify-evenly`}
   width: 50%;
-
-  @media screen and (max-width: 480px) {
-    display: none;
-  }
 `;
+// @media screen and (max-width: 480px) {
+//   display: none;
+// }
 
 const HamburgerMenu = styled.button`
   ${tw`ml-auto mr-2`}
