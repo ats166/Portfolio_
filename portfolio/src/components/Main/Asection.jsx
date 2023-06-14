@@ -319,6 +319,10 @@ const RightSection = styled.div`
 const RightText = styled.div`
   ${tw`mt-[120px] text-4xl w-[100%] mr-[10%]`}
   line-height: 60px;
+
+  @media screen and (max-width: 640px) {
+    ${tw`text-2xl`}
+  }
 `;
 
 const TextAnimation = styled.span`

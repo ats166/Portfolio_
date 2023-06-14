@@ -97,16 +97,20 @@ const ToolsGIF = styled.img`
 `;
 
 const RightSection = styled.div`
-  ${tw`w-[60%] min-h-full min-w-[460px]`}
+  ${tw`w-[60%] min-h-full min-w-[200px]`}
 
   @media screen and (max-width: 800px) {
-    ${tw`w-full px-20`}
+    ${tw`w-[60%]`}
   }
 `;
 
 const FrontButton = styled.button`
   ${tw`h-12 w-36 text-xl`}
   transform: translateY(2px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-[100%]`}
+  }
 
   ${(props) =>
     props.skills === 0
@@ -117,6 +121,10 @@ const FrontButton = styled.button`
 const OtherButton = styled.button`
   ${tw`h-12 w-36 text-xl`}
   transform: translateY(2px);
+
+  @media screen and (max-width: 800px) {
+    ${tw`w-[100%] rounded-none`}
+  }
 
   ${(props) =>
     props.skills === 1

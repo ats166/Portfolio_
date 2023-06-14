@@ -8,7 +8,7 @@ import Buddiary from "./projectassets/BudDiaryThumnail.png";
 import FunctionDetailList from "./FunctionDetailList";
 
 export default function ProjectASection(props) {
-  const img = [WillumpTV, Zzalu, Returnz, Buddiary];
+  const img = [Returnz, Zzalu, WillumpTV, Buddiary];
   const data = props.data;
   const [id, setId] = useState(["회원", 0]);
 

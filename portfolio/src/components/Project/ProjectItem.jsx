@@ -12,7 +12,7 @@ export default function ProjectItem(props) {
   const project = props.data;
   const id = project.id - 1;
   const time = project.id / 10;
-  const img = [WillumpTV, Zzalu, Returnz, Buddiary];
+  const img = [Returnz, Zzalu, WillumpTV, Buddiary];
 
   const handleGoDetail = () => {
     navigate(`/project/${id}`, { state: { data: project } });

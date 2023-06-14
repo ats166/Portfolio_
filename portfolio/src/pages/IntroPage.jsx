@@ -364,34 +364,7 @@ const MiddleTextSecond = styled.div`
     0% {
       transform: translateY(0%);
     }
-    10% {
-      opacity: 1;
-      transform: translateY(85%);
-    }
-    20% {
-      transform: translateY(170%);
-    }
-    25% {
-      transform: translateY(170%);
-    }
-    30% {
-      transform: translateY(170%);
-    }
-    35% {
-      transform: translateY(170%);
-    }
-    40% {
-      transform: translateY(150%);
-    }
-    44% {
-      transform: translateY(120%);
-    }
-    52% {
-      transform: translateY(130%);
-    }
-    95% {
-      transform: translateY(120%);
-    }
+
     100% {
       opacity: 1;
       transform: translateY(120%);
@@ -402,34 +375,6 @@ const MiddleTextSecond = styled.div`
   @keyframes three {
     0% {
       transform: translateY(0%);
-    }
-    20% {
-      opacity: 1;
-      transform: translateY(290%);
-    }
-    30% {
-      transform: translateY(290%);
-    }
-    35% {
-      transform: translateY(290%);
-    }
-    40% {
-      transform: translateY(290%);
-    }
-    44% {
-      transform: translateY(260%);
-    }
-    48% {
-      transform: translateY(210%);
-    }
-    52% {
-      transform: translateY(240%);
-    }
-    58% {
-      transform: translateY(230%);
-    }
-    61% {
-      transform: translateY(240%);
     }
     100% {
       opacity: 1;
