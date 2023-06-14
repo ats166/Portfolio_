@@ -13,7 +13,13 @@ export default function Navbar() {
   useEffect(() => {
     if (location.pathname === "/home") {
       setActive(0);
-    } else if (location.pathname === "/project") {
+    } else if (
+      location.pathname === "/project" ||
+      location.pathname === "/project/0" ||
+      location.pathname === "/project/1" ||
+      location.pathname === "/project/2" ||
+      location.pathname === "/project/3"
+    ) {
       setActive(1);
     } else if (location.pathname === "/other") {
       setActive(2);

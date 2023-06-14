@@ -8,17 +8,21 @@ import Footer from "../components/Footer.jsx";
 
 export default function MainPage() {
   return (
-    <>
+    <Wrap>
       <Container>
         <Asection />
         <Bsection />
         <Csection />
       </Container>
       <Footer />
-    </>
+    </Wrap>
   );
 }
 
 const Container = styled.div`
-  ${tw`w-full max-w-[1152px] mx-auto`}
+  ${tw`w-full max-w-[1152px] mx-auto `}
+`;
+
+const Wrap = styled.div`
+  ${tw``}
 `;

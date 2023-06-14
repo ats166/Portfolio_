@@ -6,8 +6,6 @@ export default function ProjectCSection(props) {
   const [ref, inView] = useInView({ threshold: 0.1 });
   const [run, setRun] = useState("paused");
 
-  console.log("c", props.data.troubleimg[1]);
-
   useEffect(() => {
     if (inView) {
       setRun("running");

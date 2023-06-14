@@ -13,7 +13,6 @@ export default function Bsection() {
 
   useEffect(() => {
     if (inView) {
-      console.log("True");
       setRun("running");
     } else {
     }

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import tw, { styled } from "twin.macro";
 import monitor from "../../assets/monitor.png";
 import iphone from "../../assets/iphone.png";
-import returnz from "../../assets/returnz.gif";
-import zzalu from "../../assets/zzalu.gif";
+import returnz from "../../assets/returnz.jpg";
+import zzalu from "../../assets/zzalu.jpg";
 import WillumpTV from "../../assets/WillumpTV.jpg";
-import BuddiaryM from "../../assets/BuddiaryM.gif";
-import Buddiary from "../../assets/Buddiary.gif";
+import BuddiaryM from "../../assets/BuddiaryM.jpg";
+import Buddiary from "../../assets/Buddiary.jpg";
 import Nosignal from "../../assets/Nosignal.png";
 import NosignalM from "../../assets/NosignalM.png";
 import { useInView } from "react-intersection-observer";
@@ -20,7 +20,6 @@ export default function Csection() {
 
   useEffect(() => {
     if (inView) {
-      console.log("True");
       setRun("running");
     } else {
     }
@@ -44,7 +43,6 @@ export default function Csection() {
   };
 
   const handleGoDetail = () => {
-    console.log(project.ProjectList[selectNum]);
     navigate(`/project/${selectNum}`, {
       state: { data: project.ProjectList[selectNum] },
     });

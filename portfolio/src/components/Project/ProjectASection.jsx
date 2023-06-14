@@ -16,7 +16,6 @@ export default function ProjectASection(props) {
     setId([func, idx]);
   };
 
-  console.log("프롭", props.data);
   return (
     <Container>
       <ImageContainer>

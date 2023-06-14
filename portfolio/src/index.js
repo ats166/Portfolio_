@@ -15,7 +15,7 @@ import DetailPage from "./pages/DetailPage";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<IntroPage />} />

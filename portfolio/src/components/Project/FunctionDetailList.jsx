@@ -3,7 +3,7 @@ import tw, { styled } from "twin.macro";
 
 export default function FunctionDetailList(props) {
   // 기획배경 및 서비스소개(사진)
-  console.log(props.isIdIncluded);
+
   return (
     <Container idid={props.idid} isIdIncluded={props.isIdIncluded}>
       - {props.data}
