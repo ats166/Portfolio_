@@ -1,6 +1,12 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -15,7 +21,7 @@ import DetailPage from "./pages/DetailPage";
 const root = createRoot(document.getElementById("root"));
 
 root.render(
-  <Router basename={process.env.PUBLIC_URL}>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<IntroPage />} />
@@ -26,7 +32,7 @@ root.render(
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
-  </Router>
+  </HashRouter>
 );
 
 reportWebVitals();

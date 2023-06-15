@@ -16,7 +16,7 @@ export default function ProjectCSection(props) {
   return (
     <Container ref={ref}>
       <ContentContainer>
-        <PlanningSection run={run}>How I did?</PlanningSection>
+        <PlanningSection run={run}>Trouble Shooting</PlanningSection>
         <PlanningItemList>
           {props.data.troublename.map((item, idx) => (
             <div key={idx}>

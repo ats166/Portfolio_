@@ -16,13 +16,13 @@ export default function ProjectDSection(props) {
   return (
     <Container ref={ref}>
       <ContentContainer>
-        <RetrospectSection run={run}>프로젝트 회고</RetrospectSection>
+        <RetrospectSection run={run}>Project Review</RetrospectSection>
         {props.data.othername.map((item, idx) => (
           <div key={idx}>
-            <RetrospectTitle run={run} time={idx/2 + 0.3}>
+            <RetrospectTitle run={run} time={idx / 2 + 0.3}>
               {item}
             </RetrospectTitle>
-            <RetrospectContent run={run} time={idx/2 + 0.6}>
+            <RetrospectContent run={run} time={idx / 2 + 0.6}>
               {props.data.othercontent[idx]}
             </RetrospectContent>
           </div>
