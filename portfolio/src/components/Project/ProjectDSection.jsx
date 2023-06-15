@@ -42,7 +42,7 @@ const ContentContainer = styled.div`
 `;
 
 const RetrospectSection = styled.div`
-  ${tw`mt-[4%] text-8xl text-center text-white`}
+  ${tw`mt-[4%] text-6xl text-center text-white font-bold`}
 
   animation-name: Tuptext;
   animation-duration: 1s;
@@ -62,7 +62,7 @@ const RetrospectTitle = styled.div`
 `;
 
 const RetrospectContent = styled.div`
-  $${tw`pl-[5%] pt-[4%] border text-xl font-bold`}
+  $${tw`pl-[5%] pt-[4%] border text-xl font-extralight`}
   white-space: pre-line;
   line-height:40px;
 

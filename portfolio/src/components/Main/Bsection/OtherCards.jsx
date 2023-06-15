@@ -7,17 +7,15 @@ export default function OtherCards(props) {
   const link = `${skill.link}`;
   return (
     <CardContainer time={time}>
-      <div>
-        <img src={link} alt={skill.name} className="h-24 w-full mb-2" />
-        <div className="border-t-2 w-full text-center font-intro font-bold mt-4 border-my-blue">
-          {skill.name}
-        </div>
+      <img src={link} alt={skill.name} className=" bg-center h-[60px]" />
+      <div className="border-t-2 w-full text-center font-intro font-bold mt-4 border-my-blue">
+        {skill.name}
       </div>
     </CardContainer>
   );
 }
 const CardContainer = styled.div`
-  ${tw`w-[20%] min-w-[80px] mx-4 border-2 border-my-blue p-4 rounded-xl hover:opacity-50`}
+  ${tw`flex flex-col items-center justify-center w-[20%] min-w-[100px] mx-4 border-2 border-my-blue p-4 rounded-xl hover:opacity-50`}
 
   animation-name : upcard;
   animation-delay: ${(props) => props.time}s;

@@ -100,7 +100,7 @@ const RightSection = styled.div`
   ${tw`w-[60%] min-h-full min-w-[200px]`}
 
   @media screen and (max-width: 800px) {
-    ${tw`w-[60%]`}
+    ${tw`w-[90%]`}
   }
 `;
 

@@ -51,9 +51,9 @@ export default function Csection() {
   return (
     <SectionContainer ref={ref}>
       <LeftSection run={run}>
-        <ParentMonitor src={monitor} alt="모니터" />
+        <ParentMonitor src={monitor} alt="모니터" onClick={handleGoDetail} />
         <ChildMonitor src={myProject[selectNum][0]} alt="화면" />
-        <ParentIphone src={iphone} alt="핸드폰" />
+        <ParentIphone src={iphone} alt="핸드폰" onClick={handleGoDetail} />
         <ChildIphone src={myProject[selectNum][1]} alt="화면" />
         <ProjectIntroduce>
           <ProjectOverview onClick={handleGoDetail}>
@@ -135,7 +135,7 @@ const LeftSection = styled.div`
 `;
 
 const ParentMonitor = styled.img`
-  ${tw`relative min-w-[480px] max-h-[360px] w-[60%] z-10`}
+  ${tw`relative min-w-[480px] max-h-[360px] w-[60%] z-10 cursor-pointer`}
 
   @media screen and (max-width: 800px) {
     ${tw`min-w-[240px] max-w-[240px] max-h-[180px] mr-[160px]`}
@@ -151,7 +151,7 @@ const ChildMonitor = styled.img`
 `;
 
 const ParentIphone = styled.img`
-  ${tw`absolute w-40 z-10`}
+  ${tw`absolute w-40 z-10 cursor-pointer`}
   transform: translateX(300%);
 
   @media screen and (max-width: 800px) {
@@ -171,7 +171,7 @@ const ChildIphone = styled.img`
 `;
 
 const ProjectIntroduce = styled.div`
-  ${tw`absolute font-mmf w-[34vw] text-center `}
+  ${tw`absolute font-mmf w-[34vw] text-center cursor-pointer`}
   transform : translateY(220px);
 
   @media screen and (max-width: 800px) {

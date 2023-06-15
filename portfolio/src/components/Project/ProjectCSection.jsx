@@ -54,7 +54,7 @@ const ContentContainer = styled.div`
 `;
 
 const PlanningSection = styled.div`
-  ${tw`mt-[4%] text-8xl text-center`}
+  ${tw`mt-[4%] text-6xl text-center font-bold`}
 
   animation-name: Tuptext;
   animation-duration: 1s;
