@@ -51,19 +51,17 @@ export default function IntroPage() {
           <TopText>안녕하세요</TopText>
 
           <MiddleText time={5.8}>사용자 경험을 먼저 생각하는</MiddleText>
-          <MiddleText time={7.8}>새로운 기술을 배우는 것을 좋아하는</MiddleText>
-          <MiddleText time={9.8}>
-            CSS 애니메이션을 구현하는것을 즐기는
-          </MiddleText>
+          <MiddleText time={7.8}>성능개선을 위해 노력하는</MiddleText>
+          <MiddleText time={9.8}>새로운 기술을 배우는 것을 좋아하는</MiddleText>
 
           <MiddleTextSecond name={"one"}>
             사용자 경험을 먼저 생각하는
           </MiddleTextSecond>
           <MiddleTextSecond name={"two"}>
-            새로운 기술을 배우는 것을 좋아하는
+            성능개선을 위해 노력하는
           </MiddleTextSecond>
           <MiddleTextSecond name={"three"}>
-            CSS 애니메이션을 구현하는것을 즐기는
+            새로운 기술을 배우는 것을 좋아하는
           </MiddleTextSecond>
 
           <BottomText>프론트엔드 개발자 김준영입니다.</BottomText>

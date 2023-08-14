@@ -37,7 +37,7 @@ export default function OtherPage() {
             {" "}
             * 삼성 청년 소프트웨어 아카데미 (SSAFY) 8기
           </EducationName>
-          <EducationDays time={0.2}> 2022년 7월 5일 ~ 진행중</EducationDays>
+          <EducationDays time={0.2}> 2022년 7월 5일 ~ 2023년 6월 16일</EducationDays>
         </EducationContainer>
 
         <AwardsTitle time={0.25}> Awards </AwardsTitle>
