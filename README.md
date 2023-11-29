@@ -1,8 +1,1 @@
-# Portfolio
-
-1. 이미지
-2. 반응형
-3. 슬로건
-4. Project Detail A section height
-5. how i did?
-6. lab
+# 김준영의 포트폴리오입니다.
