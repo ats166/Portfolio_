@@ -72,14 +72,13 @@ export default function Asection() {
             <TextAnimation time={4.7}>하</TextAnimation>
             <TextAnimation time={4.75}>는</TextAnimation>
             <br />
-            <TextAnimation time={5}>U</TextAnimation>
-            <TextAnimation time={5.05}>X</TextAnimation>
-            <TextAnimation time={5.1}>/</TextAnimation>
-            <TextAnimation time={5.15}>U</TextAnimation>
-            <TextAnimation time={5.2}>I</TextAnimation>
-            <TextAnimation time={5.25}>에</TextAnimation>
+            <TextAnimation time={5}>성</TextAnimation>
+            <TextAnimation time={5.05}>능</TextAnimation>
+            <TextAnimation time={5.1}>개</TextAnimation>
+            <TextAnimation time={5.15}>선</TextAnimation>
+            <TextAnimation time={5.2}>을</TextAnimation>
             <TextAnimation time={5.3}>&nbsp;</TextAnimation>
-            <TextAnimation time={5.35}>대</TextAnimation>
+            <TextAnimation time={5.35}>위</TextAnimation>
             <TextAnimation time={5.4}>해</TextAnimation>
             <TextAnimation time={5.45}>&nbsp;</TextAnimation>
             <TextAnimation time={5.5}>고</TextAnimation>

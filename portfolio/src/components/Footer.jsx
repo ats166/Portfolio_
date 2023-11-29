@@ -6,7 +6,7 @@ export default function Footer(props) {
     <Container>
       <Section>
         본페이지는 웹페이지에 최적화 되어있습니다
-        <div className="h-[100%] text-right">Last Update. 2023. 06. 14</div>
+        <div className="h-[100%] text-right">Last Update. 2023. 11. 29</div>
         <div className="text-sm">
           Copyright © 2023. 김준영 All rights reserved. 모든 사진은 허락 없이
           복사할 수 없습니다.
