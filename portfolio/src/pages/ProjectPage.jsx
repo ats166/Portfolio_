@@ -8,11 +8,11 @@ export default function ProjectPage() {
   return (
     <>
       <Container>
-        <div className="flex flex-wrap justify-center">
+        <ItemBox>
           {project.ProjectList.map((data) => (
             <ProjectItem data={data} key={data.id} />
           ))}
-        </div>
+        </ItemBox>
       </Container>
       <Footer />
     </>
@@ -21,4 +21,8 @@ export default function ProjectPage() {
 
 const Container = styled.div`
   ${tw`max-w-[1152px] mx-auto`}
+`;
+
+const ItemBox = styled.div`
+  ${tw`flex flex-wrap justify-center`}
 `;

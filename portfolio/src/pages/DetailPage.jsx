@@ -39,6 +39,5 @@ const Container = styled.div`
 
 const GoTop = styled.button`
   ${tw`fixed bottom-8 right-[5%] border-2 p-2 h-12 w-12 rounded-full text-black z-30 bg-my-blue text-white`}
-
   cursor:pointer;
 `;
